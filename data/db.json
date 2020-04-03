@@ -7,7 +7,7 @@
   },
   "models": {
     "Project": {
-      "1": "{\"id\":1,\"name\":\"project1\",\"balance\":80,\"ownerId\":1}",
+      "1": "{\"id\":1,\"name\":\"project1\",\"balance\":90,\"ownerId\":1}",
       "2": "{\"id\":2,\"name\":\"project2\",\"balance\":0,\"ownerId\":2}"
     },
     "Team": {

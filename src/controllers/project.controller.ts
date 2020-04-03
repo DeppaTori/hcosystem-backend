@@ -3,18 +3,18 @@
 // This file is licensed under the MIT License.
 // License text available at https://opensource.org/licenses/MIT
 
-import {authenticate} from '@loopback/authentication';
-import {authorize} from '@loopback/authorization';
-import {repository} from '@loopback/repository';
-import {get, getModelSchemaRef, param, patch} from '@loopback/rest';
+import { authenticate } from '@loopback/authentication';
+import { authorize } from '@loopback/authorization';
+import { repository } from '@loopback/repository';
+import { get, getModelSchemaRef, param, patch } from '@loopback/rest';
 import _ from 'lodash';
-import {assignProjectInstanceId} from '../components/casbin-authorization';
-import {Project} from '../models';
-import {ProjectRepository} from '../repositories';
+import { assignProjectInstanceId } from '../components/casbin-authorization';
+import { Project } from '../models';
+import { ProjectRepository } from '../repositories';
 
 // TBD: refactor the ACLs to a separate file
 const RESOURCE_NAME = 'project';
-const ACL_PROJECT = {
+export const ACL_PROJECT = {
   'view-all': {
     resource: `${RESOURCE_NAME}*`,
     scopes: ['view-all'],
@@ -45,7 +45,7 @@ export class ProjectController {
   constructor(
     @repository(ProjectRepository)
     public projectRepository: ProjectRepository,
-  ) {}
+  ) { }
 
   // LIST PROJECTS (balance is not public)
   @get('/list-projects', {
