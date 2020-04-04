@@ -6,3 +6,4 @@
 export * from './project.controller';
 export * from './user.controller';
 export * from './hello.controller';
+export * from './pemesanan-mobil.controller';

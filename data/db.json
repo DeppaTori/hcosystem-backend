@@ -3,7 +3,8 @@
     "Project": 3,
     "Team": 3,
     "User": 4,
-    "UserCredentials": 4
+    "UserCredentials": 4,
+    "PemesananMobil": 2
   },
   "models": {
     "Project": {
@@ -23,6 +24,9 @@
       "1": "{\"password\":\"$2a$10$Yn1/fMOjW6A.CdH7Yxb7weVFYmkcQJQBaYaiRScS6sw7ty3aL4lHu\",\"userId\":1,\"id\":1}",
       "2": "{\"password\":\"$2a$10$Yn1/fMOjW6A.CdH7Yxb7weVFYmkcQJQBaYaiRScS6sw7ty3aL4lHu\",\"userId\":2,\"id\":2}",
       "3": "{\"password\":\"$2a$10$Yn1/fMOjW6A.CdH7Yxb7weVFYmkcQJQBaYaiRScS6sw7ty3aL4lHu\",\"userId\":3,\"id\":3}"
+    },
+    "PemesananMobil": {
+      "1": "{\"id\":1,\"tanggal_pemesanan\":\"20120-04-04\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"Dinas ke luar\"}"
     }
   }
 }

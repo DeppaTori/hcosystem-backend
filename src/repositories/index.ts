@@ -7,3 +7,4 @@ export * from './team.repository';
 export * from './user.repository';
 export * from './project.repository';
 export * from './user-credentials.repository';
+export * from './pemesanan-mobil.repository';
