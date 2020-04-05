@@ -18,20 +18,20 @@ import {
   del,
   requestBody,
 } from '@loopback/rest';
-import {PemesananMobil} from '../models';
-import {PemesananMobilRepository} from '../repositories';
+import { PemesananMobil } from '../models';
+import { PemesananMobilRepository } from '../repositories';
 
 export class PemesananMobilController {
   constructor(
     @repository(PemesananMobilRepository)
-    public pemesananMobilRepository : PemesananMobilRepository,
-  ) {}
+    public pemesananMobilRepository: PemesananMobilRepository,
+  ) { }
 
   @post('/pemesanan-mobils', {
     responses: {
       '200': {
         description: 'PemesananMobil model instance',
-        content: {'application/json': {schema: getModelSchemaRef(PemesananMobil)}},
+        content: { 'application/json': { schema: getModelSchemaRef(PemesananMobil) } },
       },
     },
   })
@@ -55,7 +55,7 @@ export class PemesananMobilController {
     responses: {
       '200': {
         description: 'PemesananMobil model count',
-        content: {'application/json': {schema: CountSchema}},
+        content: { 'application/json': { schema: CountSchema } },
       },
     },
   })
@@ -73,7 +73,7 @@ export class PemesananMobilController {
           'application/json': {
             schema: {
               type: 'array',
-              items: getModelSchemaRef(PemesananMobil, {includeRelations: true}),
+              items: getModelSchemaRef(PemesananMobil, { includeRelations: true }),
             },
           },
         },
@@ -90,7 +90,7 @@ export class PemesananMobilController {
     responses: {
       '200': {
         description: 'PemesananMobil PATCH success count',
-        content: {'application/json': {schema: CountSchema}},
+        content: { 'application/json': { schema: CountSchema } },
       },
     },
   })
@@ -98,7 +98,7 @@ export class PemesananMobilController {
     @requestBody({
       content: {
         'application/json': {
-          schema: getModelSchemaRef(PemesananMobil, {partial: true}),
+          schema: getModelSchemaRef(PemesananMobil, { partial: true }),
         },
       },
     })
@@ -114,7 +114,7 @@ export class PemesananMobilController {
         description: 'PemesananMobil model instance',
         content: {
           'application/json': {
-            schema: getModelSchemaRef(PemesananMobil, {includeRelations: true}),
+            schema: getModelSchemaRef(PemesananMobil, { includeRelations: true }),
           },
         },
       },
@@ -122,7 +122,7 @@ export class PemesananMobilController {
   })
   async findById(
     @param.path.number('id') id: number,
-    @param.filter(PemesananMobil, {exclude: 'where'}) filter?: FilterExcludingWhere<PemesananMobil>
+    @param.filter(PemesananMobil, { exclude: 'where' }) filter?: FilterExcludingWhere<PemesananMobil>
   ): Promise<PemesananMobil> {
     return this.pemesananMobilRepository.findById(id, filter);
   }
@@ -139,7 +139,7 @@ export class PemesananMobilController {
     @requestBody({
       content: {
         'application/json': {
-          schema: getModelSchemaRef(PemesananMobil, {partial: true}),
+          schema: getModelSchemaRef(PemesananMobil, { partial: true }),
         },
       },
     })

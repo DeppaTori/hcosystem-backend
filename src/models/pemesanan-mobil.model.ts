@@ -1,5 +1,5 @@
-import {Entity, model, property, belongsTo} from '@loopback/repository';
-import {User} from './user.model';
+import { Entity, model, property, belongsTo } from '@loopback/repository';
+import { User, UserWithRelations } from './user.model';
 
 @model()
 export class PemesananMobil extends Entity {
@@ -38,6 +38,7 @@ export class PemesananMobil extends Entity {
 
 export interface PemesananMobilRelations {
   // describe navigational properties here
+  userId?: UserWithRelations
 }
 
 export type PemesananMobilWithRelations = PemesananMobil & PemesananMobilRelations;

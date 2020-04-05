@@ -3,10 +3,10 @@
 // This file is licensed under the MIT License.
 // License text available at https://opensource.org/licenses/MIT
 
-import {Entity, hasMany, hasOne, model, property} from '@loopback/repository';
-import {Team} from './team.model';
-import {UserCredentials} from './user-credentials.model';
-import {PemesananMobil} from './pemesanan-mobil.model';
+import { Entity, hasMany, hasOne, model, property } from '@loopback/repository';
+import { Team } from './team.model';
+import { UserCredentials } from './user-credentials.model';
+import { PemesananMobil, PemesananMobilWithRelations } from './pemesanan-mobil.model';
 
 @model({
   settings: {
@@ -56,7 +56,7 @@ export class User extends Entity {
   @hasOne(() => UserCredentials)
   userCredentials: UserCredentials;
 
-  @hasMany(() => Team, {keyTo: 'ownerId'})
+  @hasMany(() => Team, { keyTo: 'ownerId' })
   teams: Team[];
 
   // Define well-known properties here
@@ -72,6 +72,7 @@ export class User extends Entity {
 
 export interface UserRelations {
   // describe navigational properties here
+  pemesananMobils?: PemesananMobilWithRelations
 }
 
 export type UserWithRelations = User & UserRelations;
