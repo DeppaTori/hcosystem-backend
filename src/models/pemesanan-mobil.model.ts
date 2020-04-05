@@ -29,6 +29,14 @@ export class PemesananMobil extends Entity {
   })
   keterangan: string;
 
+  @property({
+    type: 'string',
+    required: true,
+    default: 'submitted',
+  })
+  status_pemesanan: string;
+
+
   @belongsTo(() => User)
   userId: number;
 
