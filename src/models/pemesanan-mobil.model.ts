@@ -1,6 +1,7 @@
 import { Entity, model, property, belongsTo } from '@loopback/repository';
 import { User, UserWithRelations } from './user.model';
 import { Mobil, MobilWithRelations } from './mobil.model';
+import { Supir, SupirWithRelations } from './supir.model';
 
 @model()
 export class PemesananMobil extends Entity {
@@ -43,6 +44,9 @@ export class PemesananMobil extends Entity {
   @belongsTo(() => Mobil)
   mobilId: string;
 
+  @belongsTo(() => Supir)
+  supirId: number;
+
   constructor(data?: Partial<PemesananMobil>) {
     super(data);
   }
@@ -51,7 +55,8 @@ export class PemesananMobil extends Entity {
 export interface PemesananMobilRelations {
   // describe navigational properties here
   userId?: UserWithRelations,
-  mobilId?: MobilWithRelations
+  mobilId?: MobilWithRelations,
+  supirId?: SupirWithRelations
 }
 
 export type PemesananMobilWithRelations = PemesananMobil & PemesananMobilRelations;
