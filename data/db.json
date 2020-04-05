@@ -4,7 +4,8 @@
     "Team": 3,
     "User": 4,
     "UserCredentials": 4,
-    "PemesananMobil": 2
+    "PemesananMobil": 2,
+    "Mobil": 3
   },
   "models": {
     "Project": {
@@ -27,6 +28,10 @@
     },
     "PemesananMobil": {
       "1": "{\"id\":1,\"tanggal_pemesanan\":\"20120-04-04\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"Dinas ke luar\"}"
+    },
+    "Mobil": {
+      "1": "{\"nomor_polisi\":\"B 2000 CD\",\"tipe_mobil\":\"Daihatsu Xenia\",\"merek_mobil\":\"Daihatsu\",\"jumlah_kursi\":7,\"status_mobil\":\"tersedia\"}",
+      "2": "{\"nomor_polisi\":\"B 3000 FE\",\"tipe_mobil\":\"Mitsubishi Xpander\",\"merek_mobil\":\"Mitsubishi\",\"jumlah_kursi\":7,\"status_mobil\":\"tersedia\"}"
     }
   }
 }

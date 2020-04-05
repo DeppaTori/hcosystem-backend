@@ -8,3 +8,4 @@ export * from './user.repository';
 export * from './project.repository';
 export * from './user-credentials.repository';
 export * from './pemesanan-mobil.repository';
+export * from './mobil.repository';
