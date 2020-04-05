@@ -6,6 +6,7 @@
 import {Entity, hasMany, hasOne, model, property} from '@loopback/repository';
 import {Team} from './team.model';
 import {UserCredentials} from './user-credentials.model';
+import {PemesananMobil} from './pemesanan-mobil.model';
 
 @model({
   settings: {
@@ -45,6 +46,8 @@ export class User extends Entity {
   })
   emailVerified?: boolean;
 
+  @hasMany(() => PemesananMobil)
+  pemesananMobils: PemesananMobil[];
   @property({
     type: 'string',
   })

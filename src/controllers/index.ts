@@ -8,3 +8,5 @@ export * from './user.controller';
 export * from './hello.controller';
 export * from './pemesanan-mobil.controller';
 export * from './mobil.controller';
+export * from './user-pemesanan-mobil.controller';
+export * from './pemesanan-mobil-user.controller';

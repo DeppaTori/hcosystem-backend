@@ -11,9 +11,10 @@ import {
   repository,
 } from '@loopback/repository';
 import {DbDataSource} from '../datasources';
-import {Team, User, UserCredentials, UserRelations} from '../models';
+import {Team, User, UserCredentials, UserRelations, PemesananMobil} from '../models';
 import {TeamRepository} from './team.repository';
 import {UserCredentialsRepository} from './user-credentials.repository';
+import {PemesananMobilRepository} from './pemesanan-mobil.repository';
 
 export class UserRepository extends DefaultCrudRepository<
   User,
@@ -30,6 +31,8 @@ export class UserRepository extends DefaultCrudRepository<
     typeof User.prototype.id
   >;
 
+  public readonly pemesananMobils: HasManyRepositoryFactory<PemesananMobil, typeof User.prototype.id>;
+
   constructor(
     @inject('datasources.db') dataSource: DbDataSource,
     @repository.getter('UserCredentialsRepository')
@@ -37,9 +40,11 @@ export class UserRepository extends DefaultCrudRepository<
       UserCredentialsRepository
     >,
     @repository.getter('TeamRepository')
-    protected teamRepositoryGetter: Getter<TeamRepository>,
+    protected teamRepositoryGetter: Getter<TeamRepository>, @repository.getter('PemesananMobilRepository') protected pemesananMobilRepositoryGetter: Getter<PemesananMobilRepository>,
   ) {
     super(User, dataSource);
+    this.pemesananMobils = this.createHasManyRepositoryFactoryFor('pemesananMobils', pemesananMobilRepositoryGetter,);
+    this.registerInclusionResolver('pemesananMobils', this.pemesananMobils.inclusionResolver);
     this.teams = this.createHasManyRepositoryFactoryFor(
       'teams',
       teamRepositoryGetter,
