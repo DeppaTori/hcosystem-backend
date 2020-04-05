@@ -5,7 +5,8 @@
     "User": 4,
     "UserCredentials": 4,
     "PemesananMobil": 2,
-    "Mobil": 3
+    "Mobil": 3,
+    "Supir": 3
   },
   "models": {
     "Project": {
@@ -27,12 +28,16 @@
       "3": "{\"password\":\"$2a$10$Yn1/fMOjW6A.CdH7Yxb7weVFYmkcQJQBaYaiRScS6sw7ty3aL4lHu\",\"userId\":3,\"id\":3}"
     },
     "PemesananMobil": {
-      "1": "{\"id\":1,\"userId\":3,\"mobilId\":\"B 2000 CD\",\"tanggal_pemesanan\":\"20120-04-04\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"Dinas ke luar\",\"status_pemesanan\":\"submitted\"}",
-      "2": "{\"id\":2,\"userId\":2,\"mobilId\":\"B 3000 FE\",\"tanggal_pemesanan\":\"20120-04-03\",\"tipe_pemesanan\":\"ekpedisi\",\"keterangan\":\"Ekpedisi\",\"status_pemesanan\":\"approved\"}"
+      "1": "{\"id\":1,\"userId\":3,\"mobilId\":\"B 2000 CD\",\"tanggal_pemesanan\":\"2020-04-04\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"Dinas ke luar\",\"status_pemesanan\":\"submitted\"}",
+      "2": "{\"id\":2,\"userId\":2,\"mobilId\":\"B 3000 FE\",\"tanggal_pemesanan\":\"2020-04-03\",\"tipe_pemesanan\":\"ekpedisi\",\"keterangan\":\"Ekpedisi\",\"status_pemesanan\":\"approved\"}"
     },
     "Mobil": {
       "1": "{\"nomor_polisi\":\"B 2000 CD\",\"tipe_mobil\":\"Daihatsu Xenia\",\"merek_mobil\":\"Daihatsu\",\"jumlah_kursi\":7,\"status_mobil\":\"tersedia\"}",
       "2": "{\"nomor_polisi\":\"B 3000 FE\",\"tipe_mobil\":\"Mitsubishi Xpander\",\"merek_mobil\":\"Mitsubishi\",\"jumlah_kursi\":7,\"status_mobil\":\"tersedia\"}"
+    },
+    "Supir": {
+      "1": "{\"id\":1,\"nama\":\"Doni\",\"nomor_handphone\":\"0812345789\",\"status_tersedia\":\"tersedia\"}",
+      "2": "{\"id\":2,\"nama\":\"Bayu\",\"nomor_handphone\":\"0856345789\",\"status_tersedia\":\"tersedia\"}"
     }
   }
 }

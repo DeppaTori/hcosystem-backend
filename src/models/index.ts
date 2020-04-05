@@ -9,3 +9,4 @@ export * from './user-credentials.model';
 export * from './user.model';
 export * from './pemesanan-mobil.model';
 export * from './mobil.model';
+export * from './supir.model';
