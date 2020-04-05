@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import { Entity, model, property, hasMany } from '@loopback/repository';
+import { PemesananMobil, PemesananMobilWithRelations } from './pemesanan-mobil.model';
 
 @model()
 export class Mobil extends Entity {
@@ -34,6 +35,8 @@ export class Mobil extends Entity {
   })
   status_mobil: string;
 
+  @hasMany(() => PemesananMobil)
+  pemesananMobils: PemesananMobil[];
 
   constructor(data?: Partial<Mobil>) {
     super(data);
@@ -42,6 +45,7 @@ export class Mobil extends Entity {
 
 export interface MobilRelations {
   // describe navigational properties here
+  pemesananMobils?: PemesananMobilWithRelations
 }
 
 export type MobilWithRelations = Mobil & MobilRelations;

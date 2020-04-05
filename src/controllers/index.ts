@@ -10,3 +10,5 @@ export * from './pemesanan-mobil.controller';
 export * from './mobil.controller';
 export * from './user-pemesanan-mobil.controller';
 export * from './pemesanan-mobil-user.controller';
+export * from './mobil-pemesanan-mobil.controller';
+export * from './pemesanan-mobil-mobil.controller';
