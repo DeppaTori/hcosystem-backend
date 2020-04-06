@@ -11,10 +11,11 @@ import {
   repository,
 } from '@loopback/repository';
 import {DbDataSource} from '../datasources';
-import {Team, User, UserCredentials, UserRelations, PemesananMobil} from '../models';
+import {Team, User, UserCredentials, UserRelations, PemesananMobil, MeetingRoomReservation} from '../models';
 import {TeamRepository} from './team.repository';
 import {UserCredentialsRepository} from './user-credentials.repository';
 import {PemesananMobilRepository} from './pemesanan-mobil.repository';
+import {MeetingRoomReservationRepository} from './meeting-room-reservation.repository';
 
 export class UserRepository extends DefaultCrudRepository<
   User,
@@ -33,6 +34,8 @@ export class UserRepository extends DefaultCrudRepository<
 
   public readonly pemesananMobils: HasManyRepositoryFactory<PemesananMobil, typeof User.prototype.id>;
 
+  public readonly meetingRoomReservations: HasManyRepositoryFactory<MeetingRoomReservation, typeof User.prototype.id>;
+
   constructor(
     @inject('datasources.db') dataSource: DbDataSource,
     @repository.getter('UserCredentialsRepository')
@@ -40,9 +43,11 @@ export class UserRepository extends DefaultCrudRepository<
       UserCredentialsRepository
     >,
     @repository.getter('TeamRepository')
-    protected teamRepositoryGetter: Getter<TeamRepository>, @repository.getter('PemesananMobilRepository') protected pemesananMobilRepositoryGetter: Getter<PemesananMobilRepository>,
+    protected teamRepositoryGetter: Getter<TeamRepository>, @repository.getter('PemesananMobilRepository') protected pemesananMobilRepositoryGetter: Getter<PemesananMobilRepository>, @repository.getter('MeetingRoomReservationRepository') protected meetingRoomReservationRepositoryGetter: Getter<MeetingRoomReservationRepository>,
   ) {
     super(User, dataSource);
+    this.meetingRoomReservations = this.createHasManyRepositoryFactoryFor('meetingRoomReservations', meetingRoomReservationRepositoryGetter,);
+    this.registerInclusionResolver('meetingRoomReservations', this.meetingRoomReservations.inclusionResolver);
     this.pemesananMobils = this.createHasManyRepositoryFactoryFor('pemesananMobils', pemesananMobilRepositoryGetter,);
     this.registerInclusionResolver('pemesananMobils', this.pemesananMobils.inclusionResolver);
     this.teams = this.createHasManyRepositoryFactoryFor(

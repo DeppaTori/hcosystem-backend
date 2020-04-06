@@ -7,6 +7,7 @@ import { Entity, hasMany, hasOne, model, property } from '@loopback/repository';
 import { Team } from './team.model';
 import { UserCredentials } from './user-credentials.model';
 import { PemesananMobil, PemesananMobilWithRelations } from './pemesanan-mobil.model';
+import { MeetingRoomReservation, MeetingRoomReservationWithRelations } from './meeting-room-reservation.model';
 
 @model({
   settings: {
@@ -48,6 +49,9 @@ export class User extends Entity {
 
   @hasMany(() => PemesananMobil)
   pemesananMobils: PemesananMobil[];
+
+  @hasMany(() => MeetingRoomReservation)
+  meetingRoomReservations: MeetingRoomReservation[];
   @property({
     type: 'string',
   })
@@ -72,7 +76,8 @@ export class User extends Entity {
 
 export interface UserRelations {
   // describe navigational properties here
-  pemesananMobils?: PemesananMobilWithRelations
+  pemesananMobils?: PemesananMobilWithRelations,
+  meetingRoomReservations?: MeetingRoomReservationWithRelations
 }
 
 export type UserWithRelations = User & UserRelations;

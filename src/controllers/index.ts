@@ -17,3 +17,7 @@ export * from './supir-pemesanan-mobil.controller';
 export * from './pemesanan-mobil-supir.controller';
 export * from './ruangmeetings.controller';
 export * from './meetingroomreservations.controller';
+export * from './ruang-meeting-meeting-room-reservation.controller';
+export * from './meeting-room-reservation-ruang-meeting.controller';
+export * from './user-meeting-room-reservation.controller';
+export * from './meeting-room-reservation-user.controller';

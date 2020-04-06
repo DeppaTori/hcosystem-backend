@@ -1,4 +1,5 @@
-import { Entity, model, property } from '@loopback/repository';
+import { Entity, model, property, hasMany } from '@loopback/repository';
+import { MeetingRoomReservation, MeetingRoomReservationWithRelations } from './meeting-room-reservation.model';
 
 @model()
 export class RuangMeeting extends Entity {
@@ -38,6 +39,8 @@ export class RuangMeeting extends Entity {
   })
   status_tersedia: string;
 
+  @hasMany(() => MeetingRoomReservation)
+  meetingRoomReservations: MeetingRoomReservation[];
 
   constructor(data?: Partial<RuangMeeting>) {
     super(data);
@@ -46,6 +49,7 @@ export class RuangMeeting extends Entity {
 
 export interface RuangMeetingRelations {
   // describe navigational properties here
+  meetingRoomReservations?: MeetingRoomReservationWithRelations
 }
 
 export type RuangMeetingWithRelations = RuangMeeting & RuangMeetingRelations;

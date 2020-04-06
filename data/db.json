@@ -49,9 +49,9 @@
       "3": "{\"id_ruangan\":3,\"nama_ruangan\":\"Galaxy\",\"fasilitas_ruangan\":\"meja, kursi, papan tulis\",\"kapasitas\":3,\"foto\":\"\",\"status_tersedia\":\"available\"}"
     },
     "MeetingRoomReservation": {
-      "1": "{\"id_meeting_room_res\":1,\"agenda\":\"Rapat Internal IT\",\"waktu_meeting\":\"2020-04-04\",\"start_meeting\":\"2020-04-04\",\"end_meeting\":\"2020-04-04\",\"deskripsi\":\"\",\"status\":\"schedule_available\"}",
-      "2": "{\"id_meeting_room_res\":2,\"agenda\":\"Rapat Anggaran\",\"waktu_meeting\":\"2020-04-05\",\"start_meeting\":\"2020-04-05\",\"end_meeting\":\"2020-04-05\",\"deskripsi\":\"\",\"status\":\"schedule_available\"}",
-      "3": "{\"id_meeting_room_res\":3,\"agenda\":\"Rapat \",\"waktu_meeting\":\"2020-04-06\",\"start_meeting\":\"2020-04-06\",\"end_meeting\":\"2020-04-06\",\"deskripsi\":\"\",\"status\":\"schedule_available\"}"
+      "1": "{\"id_meeting_room_res\":1,\"ruangMeetingId\":1,\"userId\":2,\"agenda\":\"Rapat Internal IT\",\"waktu_meeting\":\"2020-04-04\",\"start_meeting\":\"2020-04-04\",\"end_meeting\":\"2020-04-04\",\"deskripsi\":\"\",\"status\":\"schedule_available\"}",
+      "2": "{\"id_meeting_room_res\":2,\"ruangMeetingId\":3,\"userId\":2,\"agenda\":\"Rapat Anggaran\",\"waktu_meeting\":\"2020-04-05\",\"start_meeting\":\"2020-04-05\",\"end_meeting\":\"2020-04-05\",\"deskripsi\":\"\",\"status\":\"schedule_available\"}",
+      "3": "{\"id_meeting_room_res\":3,\"ruangMeetingId\":2,\"userId\":3,\"agenda\":\"Rapat \",\"waktu_meeting\":\"2020-04-06\",\"start_meeting\":\"2020-04-06\",\"end_meeting\":\"2020-04-06\",\"deskripsi\":\"\",\"status\":\"schedule_available\"}"
     }
   }
 }

@@ -1,4 +1,6 @@
-import {Entity, model, property} from '@loopback/repository';
+import { Entity, model, property, belongsTo } from '@loopback/repository';
+import { RuangMeeting, RuangMeetingWithRelations } from './ruang-meeting.model';
+import { User, UserWithRelations } from './user.model';
 
 @model()
 export class MeetingRoomReservation extends Entity {
@@ -43,6 +45,11 @@ export class MeetingRoomReservation extends Entity {
   })
   status: string;
 
+  @belongsTo(() => RuangMeeting)
+  ruangMeetingId: number;
+
+  @belongsTo(() => User)
+  userId: number;
 
   constructor(data?: Partial<MeetingRoomReservation>) {
     super(data);
@@ -51,6 +58,8 @@ export class MeetingRoomReservation extends Entity {
 
 export interface MeetingRoomReservationRelations {
   // describe navigational properties here
+  ruangMeetingId?: RuangMeetingWithRelations,
+  userId?: UserWithRelations
 }
 
 export type MeetingRoomReservationWithRelations = MeetingRoomReservation & MeetingRoomReservationRelations;
