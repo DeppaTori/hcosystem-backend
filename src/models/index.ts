@@ -11,3 +11,4 @@ export * from './pemesanan-mobil.model';
 export * from './mobil.model';
 export * from './supir.model';
 export * from './ruang-meeting.model';
+export * from './meeting-room-reservation.model';
