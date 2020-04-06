@@ -15,3 +15,4 @@ export * from './pemesanan-mobil-mobil.controller';
 export * from './supirs.controller';
 export * from './supir-pemesanan-mobil.controller';
 export * from './pemesanan-mobil-supir.controller';
+export * from './ruangmeetings.controller';

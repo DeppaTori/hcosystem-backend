@@ -4,9 +4,10 @@
     "Team": 3,
     "User": 4,
     "UserCredentials": 4,
-    "PemesananMobil": 2,
+    "PemesananMobil": 4,
     "Mobil": 3,
-    "Supir": 3
+    "Supir": 3,
+    "RuangMeeting": 4
   },
   "models": {
     "Project": {
@@ -40,6 +41,11 @@
     "Supir": {
       "1": "{\"id\":1,\"nama\":\"Doni\",\"nomor_handphone\":\"0812345789\",\"status_tersedia\":\"alocated\"}",
       "2": "{\"id\":2,\"nama\":\"Bayu\",\"nomor_handphone\":\"0856345789\",\"status_tersedia\":\"tersedia\"}"
+    },
+    "RuangMeeting": {
+      "1": "{\"id_ruangan\":1,\"nama_ruangan\":\"Galaxy\",\"fasilitas_ruangan\":\"meja, kursi, papan tulis\",\"kapasitas\":3,\"foto\":\"\",\"status_tersedia\":\"available\"}",
+      "2": "{\"id_ruangan\":2,\"nama_ruangan\":\"Galaxy\",\"fasilitas_ruangan\":\"meja, kursi, papan tulis\",\"kapasitas\":3,\"foto\":\"\",\"status_tersedia\":\"available\"}",
+      "3": "{\"id_ruangan\":3,\"nama_ruangan\":\"Galaxy\",\"fasilitas_ruangan\":\"meja, kursi, papan tulis\",\"kapasitas\":3,\"foto\":\"\",\"status_tersedia\":\"available\"}"
     }
   }
 }

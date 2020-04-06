@@ -10,3 +10,4 @@ export * from './user-credentials.repository';
 export * from './pemesanan-mobil.repository';
 export * from './mobil.repository';
 export * from './supir.repository';
+export * from './ruang-meeting.repository';
