@@ -13,3 +13,4 @@ export * from './supir.model';
 export * from './ruang-meeting.model';
 export * from './meeting-room-reservation.model';
 export * from './inventory.model';
+export * from './order-inventory.model';

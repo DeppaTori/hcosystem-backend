@@ -9,7 +9,8 @@
     "Supir": 3,
     "RuangMeeting": 4,
     "MeetingRoomReservation": 4,
-    "Inventory": 4
+    "Inventory": 4,
+    "OrderInventory": 4
   },
   "models": {
     "Project": {
@@ -58,6 +59,11 @@
       "1": "{\"id_inventory\":1,\"nama_barang\":\"Seragam\",\"stok\":100}",
       "2": "{\"id_inventory\":2,\"nama_barang\":\"Kotak Kayu\",\"stok\":200}",
       "3": "{\"id_inventory\":3,\"nama_barang\":\"Meja\",\"stok\":300}"
+    },
+    "OrderInventory": {
+      "1": "{\"id_order\":1,\"nomor_order\":\"123ABC\",\"jumlah\":5,\"waktu_ambil\":\"\"}",
+      "2": "{\"id_order\":2,\"nomor_order\":\"156AAG\",\"jumlah\":10,\"waktu_ambil\":\"\"}",
+      "3": "{\"id_order\":3,\"nomor_order\":\"190CGA\",\"jumlah\":20,\"waktu_ambil\":\"\"}"
     }
   }
 }
