@@ -12,3 +12,4 @@ export * from './mobil.repository';
 export * from './supir.repository';
 export * from './ruang-meeting.repository';
 export * from './meeting-room-reservation.repository';
+export * from './inventory.repository';

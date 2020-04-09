@@ -21,3 +21,4 @@ export * from './ruang-meeting-meeting-room-reservation.controller';
 export * from './meeting-room-reservation-ruang-meeting.controller';
 export * from './user-meeting-room-reservation.controller';
 export * from './meeting-room-reservation-user.controller';
+export * from './inventories.controller';

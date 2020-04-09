@@ -8,7 +8,8 @@
     "Mobil": 3,
     "Supir": 3,
     "RuangMeeting": 4,
-    "MeetingRoomReservation": 4
+    "MeetingRoomReservation": 4,
+    "Inventory": 4
   },
   "models": {
     "Project": {
@@ -52,6 +53,11 @@
       "1": "{\"id_meeting_room_res\":1,\"ruangMeetingId\":1,\"userId\":2,\"agenda\":\"Rapat Internal IT\",\"waktu_meeting\":\"2020-04-04\",\"start_meeting\":\"2020-04-04\",\"end_meeting\":\"2020-04-04\",\"deskripsi\":\"\",\"status\":\"schedule_available\"}",
       "2": "{\"id_meeting_room_res\":2,\"ruangMeetingId\":3,\"userId\":2,\"agenda\":\"Rapat Anggaran\",\"waktu_meeting\":\"2020-04-05\",\"start_meeting\":\"2020-04-05\",\"end_meeting\":\"2020-04-05\",\"deskripsi\":\"\",\"status\":\"schedule_available\"}",
       "3": "{\"id_meeting_room_res\":3,\"ruangMeetingId\":2,\"userId\":3,\"agenda\":\"Rapat \",\"waktu_meeting\":\"2020-04-06\",\"start_meeting\":\"2020-04-06\",\"end_meeting\":\"2020-04-06\",\"deskripsi\":\"\",\"status\":\"schedule_available\"}"
+    },
+    "Inventory": {
+      "1": "{\"id_inventory\":1,\"nama_barang\":\"Seragam\",\"stok\":100}",
+      "2": "{\"id_inventory\":2,\"nama_barang\":\"Kotak Kayu\",\"stok\":200}",
+      "3": "{\"id_inventory\":3,\"nama_barang\":\"Meja\",\"stok\":300}"
     }
   }
 }
