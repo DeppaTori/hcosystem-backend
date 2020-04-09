@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import { Entity, model, property, hasMany } from '@loopback/repository';
+import { OrderInventory, OrderInventoryWithRelations } from './order-inventory.model';
 
 @model()
 export class Inventory extends Entity {
@@ -21,6 +22,8 @@ export class Inventory extends Entity {
   })
   stok: number;
 
+  @hasMany(() => OrderInventory)
+  orderInventories: OrderInventory[];
 
   constructor(data?: Partial<Inventory>) {
     super(data);
@@ -29,6 +32,7 @@ export class Inventory extends Entity {
 
 export interface InventoryRelations {
   // describe navigational properties here
+  orderInventories?: OrderInventoryWithRelations
 }
 
 export type InventoryWithRelations = Inventory & InventoryRelations;

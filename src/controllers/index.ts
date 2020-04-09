@@ -23,3 +23,7 @@ export * from './user-meeting-room-reservation.controller';
 export * from './meeting-room-reservation-user.controller';
 export * from './inventories.controller';
 export * from './orderinventory.controller';
+export * from './inventory-order-inventory.controller';
+export * from './order-inventory-inventory.controller';
+export * from './user-order-inventory.controller';
+export * from './order-inventory-user.controller';

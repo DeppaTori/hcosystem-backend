@@ -8,6 +8,7 @@ import { Team } from './team.model';
 import { UserCredentials } from './user-credentials.model';
 import { PemesananMobil, PemesananMobilWithRelations } from './pemesanan-mobil.model';
 import { MeetingRoomReservation, MeetingRoomReservationWithRelations } from './meeting-room-reservation.model';
+import { OrderInventory, OrderInventoryWithRelations } from './order-inventory.model';
 
 @model({
   settings: {
@@ -52,6 +53,9 @@ export class User extends Entity {
 
   @hasMany(() => MeetingRoomReservation)
   meetingRoomReservations: MeetingRoomReservation[];
+
+  @hasMany(() => OrderInventory)
+  orderInventories: OrderInventory[];
   @property({
     type: 'string',
   })
@@ -77,7 +81,9 @@ export class User extends Entity {
 export interface UserRelations {
   // describe navigational properties here
   pemesananMobils?: PemesananMobilWithRelations,
-  meetingRoomReservations?: MeetingRoomReservationWithRelations
+  meetingRoomReservations?: MeetingRoomReservationWithRelations,
+  orderInventories?: OrderInventoryWithRelations
+
 }
 
 export type UserWithRelations = User & UserRelations;

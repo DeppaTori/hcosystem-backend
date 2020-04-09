@@ -1,4 +1,6 @@
-import {Entity, model, property} from '@loopback/repository';
+import { Entity, model, property, belongsTo } from '@loopback/repository';
+import { Inventory, InventoryWithRelations } from './inventory.model';
+import { User, UserWithRelations } from './user.model';
 
 @model()
 export class OrderInventory extends Entity {
@@ -26,6 +28,11 @@ export class OrderInventory extends Entity {
   })
   waktu_ambil?: string;
 
+  @belongsTo(() => Inventory)
+  inventoryId: number;
+
+  @belongsTo(() => User)
+  userId: number;
 
   constructor(data?: Partial<OrderInventory>) {
     super(data);
@@ -34,6 +41,8 @@ export class OrderInventory extends Entity {
 
 export interface OrderInventoryRelations {
   // describe navigational properties here
+  inventoryId?: InventoryWithRelations,
+  userId?: UserWithRelations
 }
 
 export type OrderInventoryWithRelations = OrderInventory & OrderInventoryRelations;
