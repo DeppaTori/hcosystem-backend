@@ -10,7 +10,7 @@
     "RuangMeeting": 4,
     "MeetingRoomReservation": 4,
     "Inventory": 4,
-    "OrderInventory": 4
+    "OrderInventory": 5
   },
   "models": {
     "Project": {
@@ -32,7 +32,7 @@
       "3": "{\"password\":\"$2a$10$Yn1/fMOjW6A.CdH7Yxb7weVFYmkcQJQBaYaiRScS6sw7ty3aL4lHu\",\"userId\":3,\"id\":3}"
     },
     "PemesananMobil": {
-      "1": "{\"id\":1,\"userId\":3,\"mobilId\":\"B 2000 CD\",\"tanggal_pemesanan\":\"2020-04-04\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"Dinas ke luar\",\"status_pemesanan\":\"submitted\"}",
+      "1": "{\"id\":1,\"tanggal_pemesanan\":\"2020-04-04T00:00:00.000Z\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"Dinas ke luar\",\"status_pemesanan\":\"approved\",\"userId\":3,\"mobilId\":\"B 2000 CD\"}",
       "2": "{\"id\":2,\"userId\":2,\"mobilId\":\"B 3000 FE\",\"tanggal_pemesanan\":\"2020-04-03\",\"tipe_pemesanan\":\"ekpedisi\",\"keterangan\":\"Ekpedisi\",\"status_pemesanan\":\"approved\"}",
       "3": "{\"id\":3,\"userId\":2,\"mobilId\":\"B 4000 GH\",\"tanggal_pemesanan\":\"2020-04-03\",\"tipe_pemesanan\":\"ekpedisi\",\"keterangan\":\"Ekpedisi\",\"status_pemesanan\":\"alocated\",\"supirId\":1}"
     },
@@ -61,9 +61,9 @@
       "3": "{\"id_inventory\":3,\"nama_barang\":\"Meja\",\"stok\":300}"
     },
     "OrderInventory": {
-      "1": "{\"id_order\":1,\"inventoryId\":1,\"userId\":3,\"nomor_order\":\"123ABC\",\"jumlah\":5,\"waktu_ambil\":\"\"}",
-      "2": "{\"id_order\":2,\"inventoryId\":1,\"userId\":2,\"nomor_order\":\"156AAG\",\"jumlah\":10,\"waktu_ambil\":\"\"}",
-      "3": "{\"id_order\":3,\"inventoryId\":2,\"userId\":1,\"nomor_order\":\"190CGA\",\"jumlah\":20,\"waktu_ambil\":\"\"}"
+      "1": "{\"id_order\":1,\"inventoryId\":1,\"userId\":3,\"nomor_order\":\"123ABC\",\"jumlah\":5,\"waktu_ambil\":\"2020-04-04\",\"status_order\":\"submitted\"}",
+      "2": "{\"id_order\":2,\"inventoryId\":1,\"userId\":2,\"nomor_order\":\"156AAG\",\"jumlah\":10,\"waktu_ambil\":\"2020-04-04\",\"status_order\":\"submitted\"}",
+      "3": "{\"id_order\":3,\"inventoryId\":2,\"userId\":1,\"nomor_order\":\"190CGA\",\"jumlah\":20,\"waktu_ambil\":\"2020-04-04\",\"status_order\":\"submitted\"}"
     }
   }
 }
