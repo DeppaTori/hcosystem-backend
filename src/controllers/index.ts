@@ -27,3 +27,4 @@ export * from './inventory-order-inventory.controller';
 export * from './order-inventory-inventory.controller';
 export * from './user-order-inventory.controller';
 export * from './order-inventory-user.controller';
+export * from './catering.controller';

@@ -14,3 +14,4 @@ export * from './ruang-meeting.model';
 export * from './meeting-room-reservation.model';
 export * from './inventory.model';
 export * from './order-inventory.model';
+export * from './catering.model';

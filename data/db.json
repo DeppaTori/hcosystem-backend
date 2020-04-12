@@ -10,7 +10,8 @@
     "RuangMeeting": 4,
     "MeetingRoomReservation": 4,
     "Inventory": 4,
-    "OrderInventory": 6
+    "OrderInventory": 6,
+    "Catering": 4
   },
   "models": {
     "Project": {
@@ -64,6 +65,11 @@
       "1": "{\"id_order\":1,\"nomor_order\":\"123ABC\",\"jumlah\":5,\"waktu_ambil\":\"2020-04-04T00:00:00.000Z\",\"status_order\":\"cancelled\",\"inventoryId\":1,\"userId\":3,\"catatan_persetujuan\":\"\"}",
       "2": "{\"id_order\":2,\"nomor_order\":\"156AAG\",\"jumlah\":10,\"waktu_ambil\":\"2020-04-04T00:00:00.000Z\",\"status_order\":\"ready to pickup\",\"inventoryId\":1,\"userId\":2}",
       "3": "{\"id_order\":3,\"nomor_order\":\"190CGA\",\"jumlah\":20,\"waktu_ambil\":\"2020-04-04T00:00:00.000Z\",\"status_order\":\"rejected\",\"inventoryId\":2,\"userId\":1}"
+    },
+    "Catering": {
+      "1": "{\"id_catering\":1,\"jumlah\":10,\"tanggal\":\"2020-04-12\",\"jenis_catering\":\"makan malam\"}",
+      "2": "{\"id_catering\":2,\"jumlah\":5,\"tanggal\":\"2020-04-10\",\"jenis_catering\":\"makan siang\"}",
+      "3": "{\"id_catering\":3,\"jumlah\":20,\"tanggal\":\"2020-04-08\",\"jenis_catering\":\"makan malam\"}"
     }
   }
 }

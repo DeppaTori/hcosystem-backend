@@ -14,3 +14,4 @@ export * from './ruang-meeting.repository';
 export * from './meeting-room-reservation.repository';
 export * from './inventory.repository';
 export * from './order-inventory.repository';
+export * from './catering.repository';
