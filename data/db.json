@@ -67,9 +67,9 @@
       "3": "{\"id_order\":3,\"nomor_order\":\"190CGA\",\"jumlah\":20,\"waktu_ambil\":\"2020-04-04T00:00:00.000Z\",\"status_order\":\"rejected\",\"inventoryId\":2,\"userId\":1}"
     },
     "Catering": {
-      "1": "{\"id_catering\":1,\"userId\":1,\"jumlah\":10,\"tanggal\":\"2020-04-12\",\"jenis_catering\":\"makan malam\"}",
-      "2": "{\"id_catering\":2,\"userId\":2,\"jumlah\":5,\"tanggal\":\"2020-04-10\",\"jenis_catering\":\"makan siang\"}",
-      "3": "{\"id_catering\":3,\"userId\":3,\"jumlah\":20,\"tanggal\":\"2020-04-08\",\"jenis_catering\":\"makan malam\"}"
+      "1": "{\"id_catering\":1,\"userId\":1,\"departemen\":\"HC\",\"jumlah\":10,\"tanggal\":\"2020-04-12\",\"jenis_catering\":\"makan malam\"}",
+      "2": "{\"id_catering\":2,\"userId\":2,\"departemen\":\"IT\",\"jumlah\":5,\"tanggal\":\"2020-04-10\",\"jenis_catering\":\"makan siang\"}",
+      "3": "{\"id_catering\":3,\"userId\":3,\"departemen\":\"IT\",\"jumlah\":20,\"tanggal\":\"2020-04-08\",\"jenis_catering\":\"makan malam\"}"
     }
   }
 }

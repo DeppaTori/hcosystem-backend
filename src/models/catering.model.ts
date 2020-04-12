@@ -28,6 +28,12 @@ export class Catering extends Entity {
   })
   jenis_catering: string;
 
+  @property({
+    type: 'string',
+    required: true,
+  })
+  departemen: string;
+
   @belongsTo(() => User)
   userId: number;
 
