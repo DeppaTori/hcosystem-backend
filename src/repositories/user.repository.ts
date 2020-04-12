@@ -11,12 +11,13 @@ import {
   repository,
 } from '@loopback/repository';
 import {DbDataSource} from '../datasources';
-import {Team, User, UserCredentials, UserRelations, PemesananMobil, MeetingRoomReservation, OrderInventory} from '../models';
+import {Team, User, UserCredentials, UserRelations, PemesananMobil, MeetingRoomReservation, OrderInventory, Catering} from '../models';
 import {TeamRepository} from './team.repository';
 import {UserCredentialsRepository} from './user-credentials.repository';
 import {PemesananMobilRepository} from './pemesanan-mobil.repository';
 import {MeetingRoomReservationRepository} from './meeting-room-reservation.repository';
 import {OrderInventoryRepository} from './order-inventory.repository';
+import {CateringRepository} from './catering.repository';
 
 export class UserRepository extends DefaultCrudRepository<
   User,
@@ -39,6 +40,8 @@ export class UserRepository extends DefaultCrudRepository<
 
   public readonly orderInventories: HasManyRepositoryFactory<OrderInventory, typeof User.prototype.id>;
 
+  public readonly caterings: HasManyRepositoryFactory<Catering, typeof User.prototype.id>;
+
   constructor(
     @inject('datasources.db') dataSource: DbDataSource,
     @repository.getter('UserCredentialsRepository')
@@ -46,9 +49,11 @@ export class UserRepository extends DefaultCrudRepository<
       UserCredentialsRepository
     >,
     @repository.getter('TeamRepository')
-    protected teamRepositoryGetter: Getter<TeamRepository>, @repository.getter('PemesananMobilRepository') protected pemesananMobilRepositoryGetter: Getter<PemesananMobilRepository>, @repository.getter('MeetingRoomReservationRepository') protected meetingRoomReservationRepositoryGetter: Getter<MeetingRoomReservationRepository>, @repository.getter('OrderInventoryRepository') protected orderInventoryRepositoryGetter: Getter<OrderInventoryRepository>,
+    protected teamRepositoryGetter: Getter<TeamRepository>, @repository.getter('PemesananMobilRepository') protected pemesananMobilRepositoryGetter: Getter<PemesananMobilRepository>, @repository.getter('MeetingRoomReservationRepository') protected meetingRoomReservationRepositoryGetter: Getter<MeetingRoomReservationRepository>, @repository.getter('OrderInventoryRepository') protected orderInventoryRepositoryGetter: Getter<OrderInventoryRepository>, @repository.getter('CateringRepository') protected cateringRepositoryGetter: Getter<CateringRepository>,
   ) {
     super(User, dataSource);
+    this.caterings = this.createHasManyRepositoryFactoryFor('caterings', cateringRepositoryGetter,);
+    this.registerInclusionResolver('caterings', this.caterings.inclusionResolver);
     this.orderInventories = this.createHasManyRepositoryFactoryFor('orderInventories', orderInventoryRepositoryGetter,);
     this.registerInclusionResolver('orderInventories', this.orderInventories.inclusionResolver);
     this.meetingRoomReservations = this.createHasManyRepositoryFactoryFor('meetingRoomReservations', meetingRoomReservationRepositoryGetter,);

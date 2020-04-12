@@ -9,6 +9,7 @@ import { UserCredentials } from './user-credentials.model';
 import { PemesananMobil, PemesananMobilWithRelations } from './pemesanan-mobil.model';
 import { MeetingRoomReservation, MeetingRoomReservationWithRelations } from './meeting-room-reservation.model';
 import { OrderInventory, OrderInventoryWithRelations } from './order-inventory.model';
+import { Catering, CateringWithRelations } from './catering.model';
 
 @model({
   settings: {
@@ -56,6 +57,9 @@ export class User extends Entity {
 
   @hasMany(() => OrderInventory)
   orderInventories: OrderInventory[];
+
+  @hasMany(() => Catering)
+  caterings: Catering[];
   @property({
     type: 'string',
   })
@@ -82,7 +86,8 @@ export interface UserRelations {
   // describe navigational properties here
   pemesananMobils?: PemesananMobilWithRelations,
   meetingRoomReservations?: MeetingRoomReservationWithRelations,
-  orderInventories?: OrderInventoryWithRelations
+  orderInventories?: OrderInventoryWithRelations,
+  caterings?: CateringWithRelations
 
 }
 
