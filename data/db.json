@@ -10,7 +10,7 @@
     "RuangMeeting": 4,
     "MeetingRoomReservation": 4,
     "Inventory": 4,
-    "OrderInventory": 5
+    "OrderInventory": 6
   },
   "models": {
     "Project": {
@@ -56,14 +56,14 @@
       "3": "{\"id_meeting_room_res\":3,\"ruangMeetingId\":2,\"userId\":3,\"agenda\":\"Rapat \",\"waktu_meeting\":\"2020-04-06\",\"start_meeting\":\"2020-04-06\",\"end_meeting\":\"2020-04-06\",\"deskripsi\":\"\",\"status\":\"schedule_available\"}"
     },
     "Inventory": {
-      "1": "{\"id_inventory\":1,\"nama_barang\":\"Seragam\",\"stok\":100}",
-      "2": "{\"id_inventory\":2,\"nama_barang\":\"Kotak Kayu\",\"stok\":200}",
-      "3": "{\"id_inventory\":3,\"nama_barang\":\"Meja\",\"stok\":300}"
+      "1": "{\"id_inventory\":1,\"nama_barang\":\"Seragam\",\"stok\":100,\"nomor_barang\":\"001\",\"kode_barang\":\"AG001\",\"jumlah_kedatangan\":0,\"nomor_do\":\"DO-001\",\"nomor_po\":\"PO-001\"}",
+      "2": "{\"id_inventory\":2,\"nama_barang\":\"Kotak Kayu\",\"stok\":200,\"nomor_barang\":\"002\",\"kode_barang\":\"CA001\",\"jumlah_kedatangan\":0,\"nomor_do\":\"DO-002\",\"nomor_po\":\"PO-002\"}",
+      "3": "{\"id_inventory\":3,\"nama_barang\":\"Meja\",\"stok\":300,\"nomor_barang\":\"004\",\"kode_barang\":\"GG001\",\"jumlah_kedatangan\":0,\"nomor_do\":\"DO-003\",\"nomor_po\":\"PO-041\"}"
     },
     "OrderInventory": {
-      "1": "{\"id_order\":1,\"inventoryId\":1,\"userId\":3,\"nomor_order\":\"123ABC\",\"jumlah\":5,\"waktu_ambil\":\"2020-04-04\",\"status_order\":\"submitted\"}",
-      "2": "{\"id_order\":2,\"inventoryId\":1,\"userId\":2,\"nomor_order\":\"156AAG\",\"jumlah\":10,\"waktu_ambil\":\"2020-04-04\",\"status_order\":\"submitted\"}",
-      "3": "{\"id_order\":3,\"inventoryId\":2,\"userId\":1,\"nomor_order\":\"190CGA\",\"jumlah\":20,\"waktu_ambil\":\"2020-04-04\",\"status_order\":\"submitted\"}"
+      "1": "{\"id_order\":1,\"nomor_order\":\"123ABC\",\"jumlah\":5,\"waktu_ambil\":\"2020-04-04T00:00:00.000Z\",\"status_order\":\"cancelled\",\"inventoryId\":1,\"userId\":3,\"catatan_persetujuan\":\"\"}",
+      "2": "{\"id_order\":2,\"nomor_order\":\"156AAG\",\"jumlah\":10,\"waktu_ambil\":\"2020-04-04T00:00:00.000Z\",\"status_order\":\"ready to pickup\",\"inventoryId\":1,\"userId\":2}",
+      "3": "{\"id_order\":3,\"nomor_order\":\"190CGA\",\"jumlah\":20,\"waktu_ambil\":\"2020-04-04T00:00:00.000Z\",\"status_order\":\"rejected\",\"inventoryId\":2,\"userId\":1}"
     }
   }
 }

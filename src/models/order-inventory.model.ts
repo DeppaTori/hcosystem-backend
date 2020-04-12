@@ -34,6 +34,11 @@ export class OrderInventory extends Entity {
   })
   status_order: string;
 
+  @property({
+    type: 'string',
+  })
+  catatan_persetujuan?: string;
+
   @belongsTo(() => Inventory)
   inventoryId: number;
 

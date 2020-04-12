@@ -22,6 +22,37 @@ export class Inventory extends Entity {
   })
   stok: number;
 
+  @property({
+    type: 'string',
+    required: true,
+  })
+  nomor_barang: string;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
+  kode_barang: string;
+
+  @property({
+    type: 'number',
+    required: true,
+  })
+  jumlah_kedatangan: number;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
+  nomor_do: string;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
+  nomor_po: string;
+
+
   @hasMany(() => OrderInventory)
   orderInventories: OrderInventory[];
 
