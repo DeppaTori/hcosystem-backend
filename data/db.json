@@ -2,7 +2,7 @@
   "ids": {
     "Project": 3,
     "Team": 3,
-    "User": 5,
+    "User": 6,
     "UserCredentials": 4,
     "PemesananMobil": 4,
     "Mobil": 3,
@@ -26,13 +26,15 @@
       "1": "{\"id\":1,\"username\":\"John\",\"email\":\"john@projects.com\"}",
       "2": "{\"id\":2,\"username\":\"Jane\",\"email\":\"jane@projects.com\"}",
       "3": "{\"id\":3,\"username\":\"Bob\",\"email\":\"bob@projects.com\"}",
-      "4": "{\"id\":4,\"username\":\"Hatori\",\"email\":\"hatori@projects.com\"}"
+      "4": "{\"id\":4,\"username\":\"Hatori\",\"email\":\"hatori@projects.com\"}",
+      "5": "{\"id\":5,\"username\":\"Scarlet\",\"email\":\"scarlet@projects.com\"}"
     },
     "UserCredentials": {
       "1": "{\"password\":\"$2a$10$Yn1/fMOjW6A.CdH7Yxb7weVFYmkcQJQBaYaiRScS6sw7ty3aL4lHu\",\"userId\":1,\"id\":1}",
       "2": "{\"password\":\"$2a$10$Yn1/fMOjW6A.CdH7Yxb7weVFYmkcQJQBaYaiRScS6sw7ty3aL4lHu\",\"userId\":2,\"id\":2}",
       "3": "{\"password\":\"$2a$10$Yn1/fMOjW6A.CdH7Yxb7weVFYmkcQJQBaYaiRScS6sw7ty3aL4lHu\",\"userId\":3,\"id\":3}",
-      "4": "{\"password\":\"$2a$10$Yn1/fMOjW6A.CdH7Yxb7weVFYmkcQJQBaYaiRScS6sw7ty3aL4lHu\",\"userId\":4,\"id\":4}"
+      "4": "{\"password\":\"$2a$10$Yn1/fMOjW6A.CdH7Yxb7weVFYmkcQJQBaYaiRScS6sw7ty3aL4lHu\",\"userId\":4,\"id\":4}",
+      "5": "{\"password\":\"$2a$10$Yn1/fMOjW6A.CdH7Yxb7weVFYmkcQJQBaYaiRScS6sw7ty3aL4lHu\",\"userId\":5,\"id\":5}"
     },
     "PemesananMobil": {
       "1": "{\"id\":1,\"tanggal_pemesanan\":\"2020-04-04T00:00:00.000Z\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"Dinas ke luar\",\"status_pemesanan\":\"approved\",\"userId\":3,\"mobilId\":\"B 2000 CD\"}",
