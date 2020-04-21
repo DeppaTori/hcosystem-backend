@@ -29,6 +29,12 @@ export class OrderInventory extends Entity {
   waktu_ambil?: string;
 
   @property({
+    type: 'date',
+    required: true,
+  })
+  tgl_input: string;
+
+  @property({
     type: 'string',
     required: true,
   })
@@ -36,8 +42,29 @@ export class OrderInventory extends Entity {
 
   @property({
     type: 'string',
+    required: true,
+  })
+  type_order: string;
+
+  @property({
+    type: 'string',
   })
   catatan_persetujuan?: string;
+
+  @property({
+    type: 'number',
+  })
+  jumlah_kedatangan?: number;
+
+  @property({
+    type: 'string',
+  })
+  nomor_do?: string;
+
+  @property({
+    type: 'string',
+  })
+  nomor_po?: string;
 
   @belongsTo(() => Inventory)
   inventoryId: number;

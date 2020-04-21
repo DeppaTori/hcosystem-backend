@@ -9,8 +9,8 @@
     "Supir": 3,
     "RuangMeeting": 4,
     "MeetingRoomReservation": 4,
-    "Inventory": 4,
-    "OrderInventory": 6,
+    "Inventory": 6,
+    "OrderInventory": 13,
     "Catering": 4
   },
   "models": {
@@ -51,8 +51,8 @@
       "2": "{\"id\":2,\"nama\":\"Bayu\",\"nomor_handphone\":\"0856345789\",\"status_tersedia\":\"tersedia\"}"
     },
     "RuangMeeting": {
-      "1": "{\"id_ruangan\":1,\"nama_ruangan\":\"Galaxy\",\"fasilitas_ruangan\":\"meja, kursi, papan tulis\",\"kapasitas\":3,\"foto\":\"\",\"status_tersedia\":\"available\"}",
-      "2": "{\"id_ruangan\":2,\"nama_ruangan\":\"Galaxy\",\"fasilitas_ruangan\":\"meja, kursi, papan tulis\",\"kapasitas\":3,\"foto\":\"\",\"status_tersedia\":\"available\"}",
+      "1": "{\"id_ruangan\":1,\"nama_ruangan\":\"Bima\",\"fasilitas_ruangan\":\"meja, kursi, papan tulis\",\"kapasitas\":3,\"foto\":\"\",\"status_tersedia\":\"available\"}",
+      "2": "{\"id_ruangan\":2,\"nama_ruangan\":\"Andromeda\",\"fasilitas_ruangan\":\"meja, kursi, papan tulis\",\"kapasitas\":3,\"foto\":\"\",\"status_tersedia\":\"available\"}",
       "3": "{\"id_ruangan\":3,\"nama_ruangan\":\"Galaxy\",\"fasilitas_ruangan\":\"meja, kursi, papan tulis\",\"kapasitas\":3,\"foto\":\"\",\"status_tersedia\":\"available\"}"
     },
     "MeetingRoomReservation": {
@@ -61,14 +61,22 @@
       "3": "{\"id_meeting_room_res\":3,\"ruangMeetingId\":2,\"userId\":3,\"agenda\":\"Rapat \",\"waktu_meeting\":\"2020-04-06\",\"start_meeting\":\"2020-04-06\",\"end_meeting\":\"2020-04-06\",\"deskripsi\":\"\",\"status\":\"schedule_available\"}"
     },
     "Inventory": {
-      "1": "{\"id_inventory\":1,\"nama_barang\":\"Seragam XY01\",\"tipe_barang\":\"Seragam\",\"stok\":100,\"nomor_barang\":\"001\",\"kode_barang\":\"AG001\",\"jumlah_kedatangan\":0,\"nomor_do\":\"DO-001\",\"nomor_po\":\"PO-001\"}",
+      "1": "{\"id_inventory\":1,\"nama_barang\":\"Seragam XY01\",\"tipe_barang\":\"Seragam\",\"stok\":99,\"nomor_barang\":\"001\",\"kode_barang\":\"AG001\",\"jumlah_kedatangan\":0,\"nomor_do\":\"DO-001\",\"nomor_po\":\"PO-001\"}",
       "2": "{\"id_inventory\":2,\"nama_barang\":\"Meja Z001\",\"tipe_barang\":\"Meja\",\"stok\":200,\"nomor_barang\":\"002\",\"kode_barang\":\"CA001\",\"jumlah_kedatangan\":0,\"nomor_do\":\"DO-002\",\"nomor_po\":\"PO-002\"}",
-      "3": "{\"id_inventory\":3,\"nama_barang\":\"Kursi Hitam 008\",\"tipe_barang\":\"Kursi\",\"stok\":300,\"nomor_barang\":\"004\",\"kode_barang\":\"GG001\",\"jumlah_kedatangan\":0,\"nomor_do\":\"DO-003\",\"nomor_po\":\"PO-041\"}"
+      "3": "{\"id_inventory\":3,\"nama_barang\":\"Kursi Hitam 008\",\"tipe_barang\":\"Kursi\",\"stok\":300,\"nomor_barang\":\"004\",\"kode_barang\":\"GG001\",\"jumlah_kedatangan\":0,\"nomor_do\":\"DO-003\",\"nomor_po\":\"PO-041\"}",
+      "4": "{\"nama_barang\":\"string\",\"stok\":0,\"nomor_barang\":\"string\",\"kode_barang\":\"string\",\"jumlah_kedatangan\":0,\"nomor_do\":\"string\",\"nomor_po\":\"string\",\"tipe_barang\":\"string\",\"id_inventory\":4}",
+      "5": "{\"id_inventory\":5,\"nama_barang\":\"string\",\"stok\":200,\"nomor_barang\":\"string\",\"kode_barang\":\"string\",\"jumlah_kedatangan\":200,\"nomor_do\":\"nomor do 11\",\"nomor_po\":\"nomor po 12\",\"tipe_barang\":\"string\"}"
     },
     "OrderInventory": {
-      "1": "{\"id_order\":1,\"nomor_order\":\"123ABC\",\"jumlah\":5,\"waktu_ambil\":\"2020-04-04T00:00:00.000Z\",\"status_order\":\"cancelled\",\"inventoryId\":1,\"userId\":3,\"catatan_persetujuan\":\"\"}",
-      "2": "{\"id_order\":2,\"nomor_order\":\"156AAG\",\"jumlah\":10,\"waktu_ambil\":\"2020-04-04T00:00:00.000Z\",\"status_order\":\"ready to pickup\",\"inventoryId\":1,\"userId\":2}",
-      "3": "{\"id_order\":3,\"nomor_order\":\"190CGA\",\"jumlah\":20,\"waktu_ambil\":\"2020-04-04T00:00:00.000Z\",\"status_order\":\"rejected\",\"inventoryId\":2,\"userId\":1}"
+      "1": "{\"id_order\":1,\"nomor_order\":\"string\",\"jumlah\":0,\"waktu_ambil\":\"2020-04-20T11:51:43.960Z\",\"tgl_input\":\"2020-04-20T11:51:43.960Z\",\"status_order\":\"test\",\"catatan_persetujuan\":\"string\",\"inventoryId\":1,\"userId\":0,\"type_order\":\"OUT\"}",
+      "2": "{\"id_order\":2,\"nomor_order\":\"156AAG\",\"jumlah\":10,\"waktu_ambil\":\"2020-04-04T00:00:00.000Z\",\"status_order\":\"ready to pickup\",\"inventoryId\":1,\"userId\":2,\"tgl_input\":\"2020-03-03T00:00:00.000Z\",\"type_order\":\"OUT\"}",
+      "3": "{\"id_order\":3,\"nomor_order\":\"190CGA\",\"jumlah\":20,\"waktu_ambil\":\"2020-04-04T00:00:00.000Z\",\"status_order\":\"rejected\",\"inventoryId\":2,\"userId\":1,\"tgl_input\":\"2020-02-25T00:00:00.000Z\",\"type_order\":\"OUT\"}",
+      "7": "{\"nomor_order\":\"1587134986000\",\"jumlah\":100,\"waktu_ambil\":\"2020-04-30T17:00:00.000Z\",\"tgl_input\":\"2020-04-17T14:49:46.000Z\",\"status_order\":\"submitted\",\"inventoryId\":2,\"userId\":2,\"id_order\":7,\"type_order\":\"OUT\"}",
+      "8": "{\"id_order\":8,\"nomor_order\":\"1587135133000\",\"jumlah\":100,\"waktu_ambil\":\"2020-04-25T17:00:00.000Z\",\"tgl_input\":\"2020-04-17T14:52:13.000Z\",\"status_order\":\"submitted\",\"inventoryId\":1,\"userId\":3,\"type_order\":\"OUT\"}",
+      "9": "{\"nomor_order\":\"1587381832000\",\"jumlah\":5,\"waktu_ambil\":\"2020-04-30T17:00:00.000Z\",\"tgl_input\":\"2020-04-20T11:23:52.000Z\",\"status_order\":\"submitted\",\"inventoryId\":1,\"userId\":2,\"id_order\":9,\"type_order\":\"OUT\"}",
+      "10": "{\"nomor_order\":\"1587391283000\",\"jumlah\":20,\"waktu_ambil\":\"2020-04-30T17:00:00.000Z\",\"tgl_input\":\"2020-04-20T14:01:23.000Z\",\"status_order\":\"submitted\",\"type_order\":\"OUT\",\"inventoryId\":1,\"userId\":3,\"id_order\":10}",
+      "11": "{\"nomor_order\":\"DOC_INV_IN\",\"jumlah\":0,\"waktu_ambil\":\"2020-04-21T08:23:43.000Z\",\"tgl_input\":\"2020-04-21T08:23:43.000Z\",\"status_order\":\"-\",\"type_order\":\"IN\",\"catatan_persetujuan\":\"\",\"nomor_do\":\"string\",\"nomor_po\":\"string\",\"inventoryId\":5,\"userId\":0,\"id_order\":11}",
+      "12": "{\"nomor_order\":\"DOC_INV_IN\",\"jumlah\":200,\"waktu_ambil\":\"2020-04-21T08:30:56.000Z\",\"tgl_input\":\"2020-04-21T08:30:56.000Z\",\"status_order\":\"-\",\"type_order\":\"IN\",\"catatan_persetujuan\":\"\",\"nomor_do\":\"nomor do 11\",\"nomor_po\":\"nomor po 12\",\"inventoryId\":5,\"userId\":0,\"id_order\":12}"
     },
     "Catering": {
       "1": "{\"id_catering\":1,\"userId\":1,\"departemen\":\"HC\",\"jumlah\":10,\"tanggal\":\"2020-04-12\",\"jenis_catering\":\"makan malam\"}",

@@ -18,20 +18,22 @@ import {
   del,
   requestBody,
 } from '@loopback/rest';
-import {Inventory} from '../models';
-import {InventoryRepository} from '../repositories';
+import { Inventory } from '../models';
+import { InventoryRepository, OrderInventoryRepository } from '../repositories';
 
 export class InventoriesController {
   constructor(
     @repository(InventoryRepository)
-    public inventoryRepository : InventoryRepository,
-  ) {}
+    public inventoryRepository: InventoryRepository,
+    @repository(OrderInventoryRepository)
+    public orderInventoryRepository: OrderInventoryRepository
+  ) { }
 
   @post('/inventories', {
     responses: {
       '200': {
         description: 'Inventory model instance',
-        content: {'application/json': {schema: getModelSchemaRef(Inventory)}},
+        content: { 'application/json': { schema: getModelSchemaRef(Inventory) } },
       },
     },
   })
@@ -48,14 +50,29 @@ export class InventoriesController {
     })
     inventory: Omit<Inventory, 'id_inventory'>,
   ): Promise<Inventory> {
-    return this.inventoryRepository.create(inventory);
+    const savedInventory = await this.inventoryRepository.create(inventory);
+
+    this.orderInventoryRepository.create({
+      nomor_order: "DOC_INV_IN",
+      jumlah: inventory.jumlah_kedatangan,
+      waktu_ambil: new Date().toString(),
+      tgl_input: new Date().toString(),
+      status_order: "-",
+      catatan_persetujuan: "",
+      inventoryId: savedInventory.id_inventory,
+      userId: 0,
+      type_order: "IN",
+      nomor_do: inventory.nomor_do,
+      nomor_po: inventory.nomor_po
+    });
+    return savedInventory;
   }
 
   @get('/inventories/count', {
     responses: {
       '200': {
         description: 'Inventory model count',
-        content: {'application/json': {schema: CountSchema}},
+        content: { 'application/json': { schema: CountSchema } },
       },
     },
   })
@@ -73,7 +90,7 @@ export class InventoriesController {
           'application/json': {
             schema: {
               type: 'array',
-              items: getModelSchemaRef(Inventory, {includeRelations: true}),
+              items: getModelSchemaRef(Inventory, { includeRelations: true }),
             },
           },
         },
@@ -90,7 +107,7 @@ export class InventoriesController {
     responses: {
       '200': {
         description: 'Inventory PATCH success count',
-        content: {'application/json': {schema: CountSchema}},
+        content: { 'application/json': { schema: CountSchema } },
       },
     },
   })
@@ -98,7 +115,7 @@ export class InventoriesController {
     @requestBody({
       content: {
         'application/json': {
-          schema: getModelSchemaRef(Inventory, {partial: true}),
+          schema: getModelSchemaRef(Inventory, { partial: true }),
         },
       },
     })
@@ -114,7 +131,7 @@ export class InventoriesController {
         description: 'Inventory model instance',
         content: {
           'application/json': {
-            schema: getModelSchemaRef(Inventory, {includeRelations: true}),
+            schema: getModelSchemaRef(Inventory, { includeRelations: true }),
           },
         },
       },
@@ -122,7 +139,7 @@ export class InventoriesController {
   })
   async findById(
     @param.path.number('id') id: number,
-    @param.filter(Inventory, {exclude: 'where'}) filter?: FilterExcludingWhere<Inventory>
+    @param.filter(Inventory, { exclude: 'where' }) filter?: FilterExcludingWhere<Inventory>
   ): Promise<Inventory> {
     return this.inventoryRepository.findById(id, filter);
   }
@@ -139,7 +156,7 @@ export class InventoriesController {
     @requestBody({
       content: {
         'application/json': {
-          schema: getModelSchemaRef(Inventory, {partial: true}),
+          schema: getModelSchemaRef(Inventory, { partial: true }),
         },
       },
     })
@@ -159,7 +176,30 @@ export class InventoriesController {
     @param.path.number('id') id: number,
     @requestBody() inventory: Inventory,
   ): Promise<void> {
-    await this.inventoryRepository.replaceById(id, inventory);
+
+    const saveOrderInvetory = await this.orderInventoryRepository.create({
+      nomor_order: "DOC_INV_IN",
+      jumlah: inventory.jumlah_kedatangan,
+      waktu_ambil: new Date().toString(),
+      tgl_input: new Date().toString(),
+      status_order: "-",
+      catatan_persetujuan: "",
+      inventoryId: id,
+      userId: 0,
+      type_order: "IN",
+      nomor_do: inventory.nomor_do,
+      nomor_po: inventory.nomor_po
+    });
+
+    // update stok
+    const curInventory = await this.inventoryRepository.findById(id);
+    const updatedInventory = {
+      ...inventory,
+      stok: curInventory.stok + inventory.jumlah_kedatangan
+    }
+
+
+    await this.inventoryRepository.replaceById(id, updatedInventory);
   }
 
   @del('/inventories/{id}', {

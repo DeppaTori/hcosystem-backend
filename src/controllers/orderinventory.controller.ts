@@ -18,20 +18,23 @@ import {
   del,
   requestBody,
 } from '@loopback/rest';
-import {OrderInventory} from '../models';
-import {OrderInventoryRepository} from '../repositories';
+import { OrderInventory, Inventory } from '../models';
+import { OrderInventoryRepository } from '../repositories';
+import { InventoryRepository } from '../repositories';
 
 export class OrderinventoryController {
   constructor(
     @repository(OrderInventoryRepository)
-    public orderInventoryRepository : OrderInventoryRepository,
-  ) {}
+    public orderInventoryRepository: OrderInventoryRepository,
+    @repository(InventoryRepository)
+    public inventoryRepository: InventoryRepository
+  ) { }
 
   @post('/order-inventories', {
     responses: {
       '200': {
         description: 'OrderInventory model instance',
-        content: {'application/json': {schema: getModelSchemaRef(OrderInventory)}},
+        content: { 'application/json': { schema: getModelSchemaRef(OrderInventory) } },
       },
     },
   })
@@ -55,7 +58,7 @@ export class OrderinventoryController {
     responses: {
       '200': {
         description: 'OrderInventory model count',
-        content: {'application/json': {schema: CountSchema}},
+        content: { 'application/json': { schema: CountSchema } },
       },
     },
   })
@@ -73,7 +76,7 @@ export class OrderinventoryController {
           'application/json': {
             schema: {
               type: 'array',
-              items: getModelSchemaRef(OrderInventory, {includeRelations: true}),
+              items: getModelSchemaRef(OrderInventory, { includeRelations: true }),
             },
           },
         },
@@ -90,7 +93,7 @@ export class OrderinventoryController {
     responses: {
       '200': {
         description: 'OrderInventory PATCH success count',
-        content: {'application/json': {schema: CountSchema}},
+        content: { 'application/json': { schema: CountSchema } },
       },
     },
   })
@@ -98,7 +101,7 @@ export class OrderinventoryController {
     @requestBody({
       content: {
         'application/json': {
-          schema: getModelSchemaRef(OrderInventory, {partial: true}),
+          schema: getModelSchemaRef(OrderInventory, { partial: true }),
         },
       },
     })
@@ -114,7 +117,7 @@ export class OrderinventoryController {
         description: 'OrderInventory model instance',
         content: {
           'application/json': {
-            schema: getModelSchemaRef(OrderInventory, {includeRelations: true}),
+            schema: getModelSchemaRef(OrderInventory, { includeRelations: true }),
           },
         },
       },
@@ -122,7 +125,7 @@ export class OrderinventoryController {
   })
   async findById(
     @param.path.number('id') id: number,
-    @param.filter(OrderInventory, {exclude: 'where'}) filter?: FilterExcludingWhere<OrderInventory>
+    @param.filter(OrderInventory, { exclude: 'where' }) filter?: FilterExcludingWhere<OrderInventory>
   ): Promise<OrderInventory> {
     return this.orderInventoryRepository.findById(id, filter);
   }
@@ -139,7 +142,7 @@ export class OrderinventoryController {
     @requestBody({
       content: {
         'application/json': {
-          schema: getModelSchemaRef(OrderInventory, {partial: true}),
+          schema: getModelSchemaRef(OrderInventory, { partial: true }),
         },
       },
     })
@@ -157,8 +160,14 @@ export class OrderinventoryController {
   })
   async replaceById(
     @param.path.number('id') id: number,
-    @requestBody() orderInventory: OrderInventory,
+    @requestBody() orderInventory: OrderInventory
   ): Promise<void> {
+
+    if (orderInventory.status_order === "ready to pickup") {
+      const currentInventory = await this.inventoryRepository.findById(orderInventory.inventoryId);
+
+      await this.inventoryRepository.updateById(orderInventory.inventoryId, { stok: currentInventory.stok - orderInventory.jumlah });
+    }
     await this.orderInventoryRepository.replaceById(id, orderInventory);
   }
 
