@@ -51,6 +51,7 @@ export class OrderinventoryController {
     })
     orderInventory: Omit<OrderInventory, 'id_order'>,
   ): Promise<OrderInventory> {
+    orderInventory.type_order = "OUT";
     return this.orderInventoryRepository.create(orderInventory);
   }
 
