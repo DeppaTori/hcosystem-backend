@@ -4,7 +4,7 @@
     "Team": 3,
     "User": 6,
     "UserCredentials": 4,
-    "PemesananMobil": 6,
+    "PemesananMobil": 9,
     "Mobil": 20205,
     "Supir": 3,
     "RuangMeeting": 4,
@@ -41,7 +41,10 @@
       "2": "{\"id\":2,\"userId\":2,\"mobilId\":\"B 3000 FE\",\"tanggal_pemesanan\":\"2020-04-03\",\"tipe_pemesanan\":\"ekpedisi\",\"keterangan\":\"Ekpedisi\",\"status_pemesanan\":\"approved\"}",
       "3": "{\"id\":3,\"userId\":2,\"mobilId\":\"B 4000 GH\",\"tanggal_pemesanan\":\"2020-04-03\",\"tipe_pemesanan\":\"ekpedisi\",\"keterangan\":\"Ekpedisi\",\"status_pemesanan\":\"alocated\",\"supirId\":1}",
       "4": "{\"tanggal_pemesanan\":\"2020-04-21T17:00:00.000Z\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"asda asd\",\"status_pemesanan\":\"submitted\",\"userId\":3,\"mobilId\":\"B 2000 CD\",\"id\":4}",
-      "5": "{\"tanggal_pemesanan\":\"2020-04-21T17:00:00.000Z\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"qweqw we\",\"status_pemesanan\":\"submitted\",\"userId\":3,\"mobilId\":\"B 2000 CD\",\"id\":5}"
+      "5": "{\"tanggal_pemesanan\":\"2020-04-21T17:00:00.000Z\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"qweqw we\",\"status_pemesanan\":\"submitted\",\"userId\":3,\"mobilId\":\"B 2000 CD\",\"id\":5}",
+      "6": "{\"id\":6,\"tanggal_pemesanan\":\"2020-04-23T17:00:00.000Z\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"erwer\",\"status_pemesanan\":\"cancelled\",\"userId\":1,\"mobilId\":\"B 2000 CD\"}",
+      "7": "{\"id\":7,\"tanggal_pemesanan\":\"2020-04-23T17:00:00.000Z\",\"tipe_pemesanan\":\"ekpedisi\",\"keterangan\":\"ekijang\",\"status_pemesanan\":\"cancelled\",\"userId\":1,\"mobilId\":\"B 4000 GH\"}",
+      "8": "{\"tanggal_pemesanan\":\"2020-04-23T17:00:00.000Z\",\"tipe_pemesanan\":\"ekpedisi\",\"keterangan\":\"asd asdas\",\"status_pemesanan\":\"submitted\",\"userId\":1,\"mobilId\":\"asdq41200\",\"id\":8}"
     },
     "Mobil": {
       "1": "{\"nomor_polisi\":\"B 2000 CD\",\"tipe_mobil\":\"Daihatsu Xenia\",\"merek_mobil\":\"Daihatsu\",\"jumlah_kursi\":7,\"status_mobil\":\"tersedia\"}",
@@ -88,7 +91,7 @@
       "10": "{\"id_order\":10,\"nomor_order\":\"1587391283000\",\"jumlah\":20,\"waktu_ambil\":\"2020-04-30T17:00:00.000Z\",\"tgl_input\":\"2020-04-20T14:01:23.000Z\",\"status_order\":\"cancelled\",\"type_order\":\"OUT\",\"inventoryId\":1,\"userId\":3}",
       "11": "{\"nomor_order\":\"DOC_INV_IN\",\"jumlah\":0,\"waktu_ambil\":\"2020-04-21T08:23:43.000Z\",\"tgl_input\":\"2020-04-21T08:23:43.000Z\",\"status_order\":\"-\",\"type_order\":\"IN\",\"catatan_persetujuan\":\"\",\"nomor_do\":\"string\",\"nomor_po\":\"string\",\"inventoryId\":5,\"userId\":0,\"id_order\":11}",
       "12": "{\"nomor_order\":\"DOC_INV_IN\",\"jumlah\":200,\"waktu_ambil\":\"2020-04-21T08:30:56.000Z\",\"tgl_input\":\"2020-04-21T08:30:56.000Z\",\"status_order\":\"-\",\"type_order\":\"IN\",\"catatan_persetujuan\":\"\",\"nomor_do\":\"nomor do 11\",\"nomor_po\":\"nomor po 12\",\"inventoryId\":5,\"userId\":0,\"id_order\":12}",
-      "13": "{\"nomor_order\":\"1587459637000\",\"jumlah\":20,\"waktu_ambil\":\"2020-04-30T17:00:00.000Z\",\"tgl_input\":\"2020-04-21T09:00:37.000Z\",\"status_order\":\"submitted\",\"type_order\":\"OUT\",\"inventoryId\":5,\"userId\":1,\"id_order\":13}",
+      "13": "{\"id_order\":13,\"nomor_order\":\"1587459637000\",\"jumlah\":20,\"waktu_ambil\":\"2020-04-30T17:00:00.000Z\",\"tgl_input\":\"2020-04-21T09:00:37.000Z\",\"status_order\":\"cancelled\",\"type_order\":\"OUT\",\"inventoryId\":5,\"userId\":1}",
       "14": "{\"nomor_order\":\"DOC_INV_IN\",\"jumlah\":123,\"waktu_ambil\":\"2020-04-21T09:02:14.000Z\",\"tgl_input\":\"2020-04-21T09:02:14.000Z\",\"status_order\":\"-\",\"type_order\":\"IN\",\"catatan_persetujuan\":\"\",\"nomor_do\":\"DO123\",\"nomor_po\":\"PO123\",\"inventoryId\":5,\"userId\":0,\"id_order\":14}",
       "15": "{\"nomor_order\":\"DOC_INV_IN\",\"jumlah\":190,\"waktu_ambil\":\"2020-04-21T09:03:06.000Z\",\"tgl_input\":\"2020-04-21T09:03:06.000Z\",\"status_order\":\"-\",\"type_order\":\"IN\",\"catatan_persetujuan\":\"\",\"nomor_do\":\"DO123\",\"nomor_po\":\"PO123\",\"inventoryId\":6,\"userId\":0,\"id_order\":15}",
       "16": "{\"nomor_order\":\"DOC_INV_IN\",\"jumlah\":110,\"waktu_ambil\":\"2020-04-21T09:03:58.000Z\",\"tgl_input\":\"2020-04-21T09:03:58.000Z\",\"status_order\":\"-\",\"type_order\":\"IN\",\"catatan_persetujuan\":\"\",\"nomor_do\":\"DO0099\",\"nomor_po\":\"PO0999\",\"inventoryId\":6,\"userId\":0,\"id_order\":16}",
