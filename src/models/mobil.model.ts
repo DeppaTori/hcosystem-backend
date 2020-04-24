@@ -35,6 +35,11 @@ export class Mobil extends Entity {
   })
   status_mobil: string;
 
+  @property({
+    type: 'string',
+  })
+  temp_nomor_polisi: string;
+
   @hasMany(() => PemesananMobil)
   pemesananMobils: PemesananMobil[];
 

@@ -18,20 +18,20 @@ import {
   del,
   requestBody,
 } from '@loopback/rest';
-import {Mobil} from '../models';
-import {MobilRepository} from '../repositories';
+import { Mobil } from '../models';
+import { MobilRepository } from '../repositories';
 
 export class MobilController {
   constructor(
     @repository(MobilRepository)
-    public mobilRepository : MobilRepository,
-  ) {}
+    public mobilRepository: MobilRepository,
+  ) { }
 
   @post('/mobils', {
     responses: {
       '200': {
         description: 'Mobil model instance',
-        content: {'application/json': {schema: getModelSchemaRef(Mobil)}},
+        content: { 'application/json': { schema: getModelSchemaRef(Mobil) } },
       },
     },
   })
@@ -48,14 +48,18 @@ export class MobilController {
     })
     mobil: Omit<Mobil, 'nomor_polisi'>,
   ): Promise<Mobil> {
-    return this.mobilRepository.create(mobil);
+    const addMobil = {
+      ...mobil,
+      nomor_polisi: mobil.temp_nomor_polisi
+    };
+    return this.mobilRepository.create(addMobil);
   }
 
   @get('/mobils/count', {
     responses: {
       '200': {
         description: 'Mobil model count',
-        content: {'application/json': {schema: CountSchema}},
+        content: { 'application/json': { schema: CountSchema } },
       },
     },
   })
@@ -73,7 +77,7 @@ export class MobilController {
           'application/json': {
             schema: {
               type: 'array',
-              items: getModelSchemaRef(Mobil, {includeRelations: true}),
+              items: getModelSchemaRef(Mobil, { includeRelations: true }),
             },
           },
         },
@@ -90,7 +94,7 @@ export class MobilController {
     responses: {
       '200': {
         description: 'Mobil PATCH success count',
-        content: {'application/json': {schema: CountSchema}},
+        content: { 'application/json': { schema: CountSchema } },
       },
     },
   })
@@ -98,7 +102,7 @@ export class MobilController {
     @requestBody({
       content: {
         'application/json': {
-          schema: getModelSchemaRef(Mobil, {partial: true}),
+          schema: getModelSchemaRef(Mobil, { partial: true }),
         },
       },
     })
@@ -114,7 +118,7 @@ export class MobilController {
         description: 'Mobil model instance',
         content: {
           'application/json': {
-            schema: getModelSchemaRef(Mobil, {includeRelations: true}),
+            schema: getModelSchemaRef(Mobil, { includeRelations: true }),
           },
         },
       },
@@ -122,7 +126,7 @@ export class MobilController {
   })
   async findById(
     @param.path.string('id') id: string,
-    @param.filter(Mobil, {exclude: 'where'}) filter?: FilterExcludingWhere<Mobil>
+    @param.filter(Mobil, { exclude: 'where' }) filter?: FilterExcludingWhere<Mobil>
   ): Promise<Mobil> {
     return this.mobilRepository.findById(id, filter);
   }
@@ -139,7 +143,7 @@ export class MobilController {
     @requestBody({
       content: {
         'application/json': {
-          schema: getModelSchemaRef(Mobil, {partial: true}),
+          schema: getModelSchemaRef(Mobil, { partial: true }),
         },
       },
     })
