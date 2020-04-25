@@ -2,13 +2,13 @@
   "ids": {
     "Project": 3,
     "Team": 3,
-    "User": 6,
+    "User": 10,
     "UserCredentials": 4,
-    "PemesananMobil": 9,
-    "Mobil": 20205,
+    "PemesananMobil": 15,
+    "Mobil": 20206,
     "Supir": 3,
     "RuangMeeting": 4,
-    "MeetingRoomReservation": 6,
+    "MeetingRoomReservation": 10,
     "Inventory": 10,
     "OrderInventory": 21,
     "Catering": 5
@@ -27,7 +27,8 @@
       "2": "{\"id\":2,\"username\":\"Jane\",\"email\":\"jane@projects.com\"}",
       "3": "{\"id\":3,\"username\":\"Bob\",\"email\":\"bob@projects.com\"}",
       "4": "{\"id\":4,\"username\":\"Hatori\",\"email\":\"hatori@projects.com\"}",
-      "5": "{\"id\":5,\"username\":\"Scarlet\",\"email\":\"scarlet@projects.com\"}"
+      "5": "{\"id\":5,\"username\":\"Scarlet\",\"email\":\"scarlet@projects.com\"}",
+      "9": "{\"id\":9,\"username\":\"asda \",\"email\":\"asa@adad.com\"}"
     },
     "UserCredentials": {
       "1": "{\"password\":\"$2a$10$Yn1/fMOjW6A.CdH7Yxb7weVFYmkcQJQBaYaiRScS6sw7ty3aL4lHu\",\"userId\":1,\"id\":1}",
@@ -42,9 +43,15 @@
       "3": "{\"id\":3,\"userId\":2,\"mobilId\":\"B 4000 GH\",\"tanggal_pemesanan\":\"2020-04-03\",\"tipe_pemesanan\":\"ekpedisi\",\"keterangan\":\"Ekpedisi\",\"status_pemesanan\":\"alocated\",\"supirId\":1}",
       "4": "{\"tanggal_pemesanan\":\"2020-04-21T17:00:00.000Z\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"asda asd\",\"status_pemesanan\":\"submitted\",\"userId\":3,\"mobilId\":\"B 2000 CD\",\"id\":4}",
       "5": "{\"tanggal_pemesanan\":\"2020-04-21T17:00:00.000Z\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"qweqw we\",\"status_pemesanan\":\"submitted\",\"userId\":3,\"mobilId\":\"B 2000 CD\",\"id\":5}",
-      "6": "{\"id\":6,\"tanggal_pemesanan\":\"2020-04-23T17:00:00.000Z\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"erwer\",\"status_pemesanan\":\"cancelled\",\"userId\":1,\"mobilId\":\"B 2000 CD\"}",
+      "6": "{\"id\":6,\"tanggal_pemesanan\":\"2020-04-23T17:00:00.000Z\",\"tipe_pemesanan\":\"ekpedisi\",\"keterangan\":\"erwer asdasd\",\"status_pemesanan\":\"submitted\",\"userId\":1,\"mobilId\":\"B 2000 CD\"}",
       "7": "{\"id\":7,\"tanggal_pemesanan\":\"2020-04-23T17:00:00.000Z\",\"tipe_pemesanan\":\"ekpedisi\",\"keterangan\":\"ekijang\",\"status_pemesanan\":\"cancelled\",\"userId\":1,\"mobilId\":\"B 4000 GH\"}",
-      "8": "{\"tanggal_pemesanan\":\"2020-04-23T17:00:00.000Z\",\"tipe_pemesanan\":\"ekpedisi\",\"keterangan\":\"asd asdas\",\"status_pemesanan\":\"submitted\",\"userId\":1,\"mobilId\":\"asdq41200\",\"id\":8}"
+      "8": "{\"tanggal_pemesanan\":\"2020-04-23T17:00:00.000Z\",\"tipe_pemesanan\":\"ekpedisi\",\"keterangan\":\"asd asdas\",\"status_pemesanan\":\"submitted\",\"userId\":1,\"mobilId\":\"asdq41200\",\"id\":8}",
+      "9": "{\"tanggal_pemesanan\":\"2020-04-27T17:00:00.000Z\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"asdas asd\",\"status_pemesanan\":\"submitted\",\"userId\":2,\"mobilId\":\"qweq\",\"id\":9}",
+      "10": "{\"id\":10,\"tanggal_pemesanan\":\"2020-04-25T13:24:54.000Z\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"Keterangan pemesanan mobil\",\"status_pemesanan\":\"submitted\",\"tipe_perjalanan\":\"PulangPergi\",\"barang_ekpedisi\":\"\",\"lokasi_tujuan\":\"\",\"tipe_transportasi\":\"mobildinas\",\"userId\":2}",
+      "11": "{\"tanggal_pemesanan\":\"2020-04-25T13:21:55.000Z\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"Keterangan \",\"status_pemesanan\":\"submitted\",\"tipe_perjalanan\":\"PulangPergi\",\"barang_ekpedisi\":\"Barang yang dikirim\",\"lokasi_tujuan\":\"lokasi tujuan\",\"tipe_transportasi\":\"mobildinas\",\"userId\":2,\"id\":11}",
+      "12": "{\"tanggal_pemesanan\":\"2020-04-25T13:27:08.000Z\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"adasdasd\",\"status_pemesanan\":\"submitted\",\"tipe_perjalanan\":\"PulangPergi\",\"barang_ekpedisi\":\"Barang yang dikirim\",\"lokasi_tujuan\":\"Bandung\",\"tipe_transportasi\":\"mobildinas\",\"userId\":2,\"id\":12}",
+      "13": "{\"id\":13,\"tanggal_pemesanan\":\"2020-04-25T13:53:34.000Z\",\"tipe_pemesanan\":\"ekpedisi\",\"keterangan\":\"Keterangan 2.3\",\"status_pemesanan\":\"submitted\",\"tipe_perjalanan\":\"drop\",\"barang_ekpedisi\":\"Barang yang dikirim 2.3\",\"lokasi_tujuan\":\"Bandung 2.3\",\"tipe_transportasi\":\"Taxi\",\"userId\":2,\"mobilId\":\"qweq\"}",
+      "14": "{\"tanggal_pemesanan\":\"2020-04-25T13:56:46.000Z\",\"tipe_pemesanan\":\"dinas\",\"keterangan\":\"Keterangan 3.00\",\"status_pemesanan\":\"submitted\",\"tipe_perjalanan\":\"PulangPergi\",\"barang_ekpedisi\":\"\",\"lokasi_tujuan\":\"Tujuan 3.00\",\"tipe_transportasi\":\"mobildinas\",\"userId\":2,\"mobilId\":\"B 4000 GH\",\"id\":14}"
     },
     "Mobil": {
       "1": "{\"nomor_polisi\":\"B 2000 CD\",\"tipe_mobil\":\"Daihatsu Xenia\",\"merek_mobil\":\"Daihatsu\",\"jumlah_kursi\":7,\"status_mobil\":\"tersedia\"}",
@@ -52,7 +59,8 @@
       "3": "{\"nomor_polisi\":\"B 4000 GH\",\"tipe_mobil\":\"Kijang Innova\",\"merek_mobil\":\"Toyota\",\"jumlah_kursi\":7,\"status_mobil\":\"booked\"}",
       "20202": "{\"nomor_polisi\":\"20202\",\"tipe_mobil\":\"daihatsu\",\"merek_mobil\":\"Daihatsu\",\"jumlah_kursi\":5,\"status_mobil\":\"available\"}",
       "asda234": "{\"nomor_polisi\":\"asda234\",\"tipe_mobil\":\"daihatsu\",\"merek_mobil\":\"Daihatsu\",\"jumlah_kursi\":5,\"status_mobil\":\"available\",\"temp_nomor_polisi\":\"asda234\"}",
-      "asdq41200": "{\"nomor_polisi\":\"asdq41200\",\"tipe_mobil\":\"daihatsu tes ada\",\"merek_mobil\":\"Toyota\",\"jumlah_kursi\":8,\"status_mobil\":\"available\",\"temp_nomor_polisi\":\"asdq41200\"}"
+      "asdq41200": "{\"nomor_polisi\":\"asdq41200\",\"tipe_mobil\":\"daihatsu tes ada\",\"merek_mobil\":\"Toyota\",\"jumlah_kursi\":8,\"status_mobil\":\"available\",\"temp_nomor_polisi\":\"asdq41200\"}",
+      "qweq": "{\"nomor_polisi\":\"qweq\",\"tipe_mobil\":\"weqeqqweq \",\"merek_mobil\":\"Suzuki\",\"jumlah_kursi\":8,\"status_mobil\":\"available\",\"temp_nomor_polisi\":\"qweq\"}"
     },
     "Supir": {
       "1": "{\"id\":1,\"nama\":\"Doni\",\"nomor_handphone\":\"0812345789\",\"status_tersedia\":\"alocated\"}",
@@ -68,7 +76,11 @@
       "2": "{\"id_meeting_room_res\":2,\"ruangMeetingId\":3,\"userId\":2,\"agenda\":\"Rapat Anggaran\",\"waktu_meeting\":\"2020-04-05\",\"start_meeting\":\"2020-04-05\",\"end_meeting\":\"2020-04-05\",\"deskripsi\":\"\",\"status\":\"schedule_available\"}",
       "3": "{\"id_meeting_room_res\":3,\"agenda\":\"Rapat \",\"waktu_meeting\":\"2020-04-06T17:00:00.000Z\",\"start_meeting\":\"2020-04-23T17:00:00.000Z\",\"end_meeting\":\"2020-04-23T17:00:00.000Z\",\"deskripsi\":\"sdfs fsd\",\"status\":\"cancelled\",\"ruangMeetingId\":2,\"userId\":3}",
       "4": "{\"id_meeting_room_res\":4,\"agenda\":\"asd asd \",\"waktu_meeting\":\"2020-04-25T17:00:00.000Z\",\"start_meeting\":\"2020-04-25T17:00:00.000Z\",\"end_meeting\":\"2020-04-25T17:00:00.000Z\",\"deskripsi\":\"asd as asd\",\"status\":\"cancelled\",\"ruangMeetingId\":1,\"userId\":3}",
-      "5": "{\"agenda\":\"sdas asd\",\"waktu_meeting\":\"2020-04-16T17:00:00.000Z\",\"start_meeting\":\"2020-04-16T17:00:00.000Z\",\"end_meeting\":\"2020-04-16T17:00:00.000Z\",\"deskripsi\":\"asdas\",\"status\":\"schedule_available\",\"ruangMeetingId\":1,\"userId\":1,\"id_meeting_room_res\":5}"
+      "5": "{\"agenda\":\"sdas asd\",\"waktu_meeting\":\"2020-04-16T17:00:00.000Z\",\"start_meeting\":\"2020-04-16T17:00:00.000Z\",\"end_meeting\":\"2020-04-16T17:00:00.000Z\",\"deskripsi\":\"asdas\",\"status\":\"schedule_available\",\"ruangMeetingId\":1,\"userId\":1,\"id_meeting_room_res\":5}",
+      "6": "{\"agenda\":\"asdasd\",\"waktu_meeting\":\"2020-04-28T17:00:00.000Z\",\"start_meeting\":\"2020-04-28T07:00:00.000Z\",\"end_meeting\":\"2020-04-28T08:00:00.000Z\",\"deskripsi\":\"asdasd\",\"status\":\"schedule_available\",\"ruangMeetingId\":3,\"userId\":2,\"id_meeting_room_res\":6}",
+      "7": "{\"agenda\":\"asdasasd asd\",\"waktu_meeting\":\"2020-04-28T17:00:00.000Z\",\"start_meeting\":\"2020-04-28T07:00:00.000Z\",\"end_meeting\":\"2020-04-28T08:00:00.000Z\",\"deskripsi\":\"asda das\",\"status\":\"schedule_available\",\"ruangMeetingId\":3,\"userId\":2,\"id_meeting_room_res\":7}",
+      "8": "{\"agenda\":\"asdasd\",\"waktu_meeting\":\"2020-04-28T17:00:00.000Z\",\"start_meeting\":\"2020-04-28T07:00:00.000Z\",\"end_meeting\":\"2020-04-28T08:00:00.000Z\",\"deskripsi\":\"asdasd\",\"status\":\"schedule_available\",\"ruangMeetingId\":3,\"userId\":2,\"id_meeting_room_res\":8}",
+      "9": "{\"id_meeting_room_res\":9,\"agenda\":\"asd asd\",\"waktu_meeting\":\"2020-04-28T17:00:00.000Z\",\"start_meeting\":\"2020-04-28T07:00:00.000Z\",\"end_meeting\":\"2020-04-28T08:00:00.000Z\",\"deskripsi\":\"asdas dasd\",\"status\":\"schedule_available\",\"ruangMeetingId\":3,\"userId\":2}"
     },
     "Inventory": {
       "1": "{\"id_inventory\":1,\"nama_barang\":\"Seragam XY01\",\"tipe_barang\":\"Seragam\",\"stok\":99,\"nomor_barang\":\"001\",\"kode_barang\":\"AG001\",\"jumlah_kedatangan\":0,\"nomor_do\":\"DO-001\",\"nomor_po\":\"PO-001\"}",

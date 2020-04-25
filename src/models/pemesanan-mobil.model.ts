@@ -37,6 +37,31 @@ export class PemesananMobil extends Entity {
   })
   status_pemesanan: string;
 
+  @property({
+    type: 'string',
+  })
+  tipe_perjalanan: string;
+
+  @property({
+    type: 'string',
+  })
+  voucher_taxi: string;
+
+  @property({
+    type: 'string',
+  })
+  barang_ekpedisi: string;
+
+  @property({
+    type: 'string',
+  })
+  lokasi_tujuan: string;
+
+  @property({
+    type: 'string',
+  })
+  tipe_transportasi: string;
+
 
   @belongsTo(() => User)
   userId: number;

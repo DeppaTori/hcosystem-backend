@@ -18,20 +18,20 @@ import {
   del,
   requestBody,
 } from '@loopback/rest';
-import {MeetingRoomReservation} from '../models';
-import {MeetingRoomReservationRepository} from '../repositories';
+import { MeetingRoomReservation } from '../models';
+import { MeetingRoomReservationRepository } from '../repositories';
 
 export class MeetingroomreservationsController {
   constructor(
     @repository(MeetingRoomReservationRepository)
-    public meetingRoomReservationRepository : MeetingRoomReservationRepository,
-  ) {}
+    public meetingRoomReservationRepository: MeetingRoomReservationRepository,
+  ) { }
 
   @post('/meeting-room-reservations', {
     responses: {
       '200': {
         description: 'MeetingRoomReservation model instance',
-        content: {'application/json': {schema: getModelSchemaRef(MeetingRoomReservation)}},
+        content: { 'application/json': { schema: getModelSchemaRef(MeetingRoomReservation) } },
       },
     },
   })
@@ -55,7 +55,7 @@ export class MeetingroomreservationsController {
     responses: {
       '200': {
         description: 'MeetingRoomReservation model count',
-        content: {'application/json': {schema: CountSchema}},
+        content: { 'application/json': { schema: CountSchema } },
       },
     },
   })
@@ -73,7 +73,7 @@ export class MeetingroomreservationsController {
           'application/json': {
             schema: {
               type: 'array',
-              items: getModelSchemaRef(MeetingRoomReservation, {includeRelations: true}),
+              items: getModelSchemaRef(MeetingRoomReservation, { includeRelations: true }),
             },
           },
         },
@@ -90,7 +90,7 @@ export class MeetingroomreservationsController {
     responses: {
       '200': {
         description: 'MeetingRoomReservation PATCH success count',
-        content: {'application/json': {schema: CountSchema}},
+        content: { 'application/json': { schema: CountSchema } },
       },
     },
   })
@@ -98,7 +98,7 @@ export class MeetingroomreservationsController {
     @requestBody({
       content: {
         'application/json': {
-          schema: getModelSchemaRef(MeetingRoomReservation, {partial: true}),
+          schema: getModelSchemaRef(MeetingRoomReservation, { partial: true }),
         },
       },
     })
@@ -114,7 +114,7 @@ export class MeetingroomreservationsController {
         description: 'MeetingRoomReservation model instance',
         content: {
           'application/json': {
-            schema: getModelSchemaRef(MeetingRoomReservation, {includeRelations: true}),
+            schema: getModelSchemaRef(MeetingRoomReservation, { includeRelations: true }),
           },
         },
       },
@@ -122,7 +122,7 @@ export class MeetingroomreservationsController {
   })
   async findById(
     @param.path.number('id') id: number,
-    @param.filter(MeetingRoomReservation, {exclude: 'where'}) filter?: FilterExcludingWhere<MeetingRoomReservation>
+    @param.filter(MeetingRoomReservation, { exclude: 'where' }) filter?: FilterExcludingWhere<MeetingRoomReservation>
   ): Promise<MeetingRoomReservation> {
     return this.meetingRoomReservationRepository.findById(id, filter);
   }
@@ -139,7 +139,7 @@ export class MeetingroomreservationsController {
     @requestBody({
       content: {
         'application/json': {
-          schema: getModelSchemaRef(MeetingRoomReservation, {partial: true}),
+          schema: getModelSchemaRef(MeetingRoomReservation, { partial: true }),
         },
       },
     })
