@@ -30,3 +30,4 @@ export * from './order-inventory-user.controller';
 export * from './catering.controller';
 export * from './user-catering.controller';
 export * from './catering-user.controller';
+export * from './usermanage.controller';
